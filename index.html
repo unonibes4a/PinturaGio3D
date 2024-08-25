@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- no puede utiliza este odigo po derechos de autor Giovanni Ernesto rodriguez diaz  -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>pintura 3d Gio</title>
+
+    <script src="https://cdn.babylonjs.com/babylon.js"></script>
+    <script src="https://cdn.babylonjs.com/loaders/babylonjs.loaders.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.6.2/dat.gui.min.js"></script>
+    <script src="https://assets.babylonjs.com/generated/Assets.js"></script>
+    <script src="https://cdn.babylonjs.com/recast.js"></script>
+    <script src="https://cdn.babylonjs.com/ammo.js"></script>
+    <script src="https://cdn.babylonjs.com/havok/HavokPhysics_umd.js"></script>
+    <script src="https://cdn.babylonjs.com/cannon.js"></script>
+    <script src="https://cdn.babylonjs.com/Oimo.js"></script>
+    <script src="https://cdn.babylonjs.com/earcut.min.js"></script>
+    <script src="https://cdn.babylonjs.com/babylon.js"></script>
+    <script src="https://cdn.babylonjs.com/materialsLibrary/babylonjs.materials.min.js"></script>
+    <script src="https://cdn.babylonjs.com/proceduralTexturesLibrary/babylonjs.proceduralTextures.min.js"></script>
+    <script src="https://cdn.babylonjs.com/postProcessesLibrary/babylonjs.postProcess.min.js"></script>
+    <script src="https://cdn.babylonjs.com/loaders/babylonjs.loaders.js"></script>
+    <script src="https://cdn.babylonjs.com/serializers/babylonjs.serializers.min.js"></script>
+    <script src="https://cdn.babylonjs.com/gui/babylon.gui.min.js"></script>
+    <script src="https://cdn.babylonjs.com/inspector/babylon.inspector.bundle.js"></script>
+
+    <style>
+      html,
+      body {
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+      #renderCanvas {
+        width: 100%;
+        height: 100%;
+        touch-action: none;
+      }
+
+      #canvasZone {
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+      }
+
+      #idpaneldecontrol2 {
+        position: absolute;
+        top: 70%;
+        left: 1%;
+
+        width: auto;
+        height: 80px;
+        background-color: rgb(0, 0, 0);
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+        align-content: center;
+      }
+
+      #idpaneldecontrol2 * {
+        margin-bottom: 1rem;
+      }
+
+      #idclickInputfile {
+      }
+
+      .displanenoe {
+        display: none;
+      }
+
+      .clhover:hover {
+        color: rgb(27, 145, 255);
+        border: 3px solid rgb(27, 145, 255);
+      }
+
+      .clcirlce {
+        position: relative;
+        width: 20px;
+        height: 79px;
+        border: 3px solid #c7c7c7;
+        border-radius: 50%;
+        background-color: #000000b9;
+        color: #ffffff;
+
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+
+        cursor: pointer;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="canvasZone"><canvas id="renderCanvas"></canvas></div>
+
+    <div id="idpaneldecontrol2">
+      <div
+        id="idclickInputfile"
+        class="clhover clcirlce"
+        onclick="loadInputfilesIDdvv()"
+      >
+        &#x2681;
+      </div>
+      <script>
+        function loadInputfilesIDdvv() {
+          document.getElementById("fileInput").click();
+        }
+      </script>
+      <input
+        id="fileInput"
+        class="displanenoe"
+        type="file"
+        accept=".glb, .obj"
+      />
+      <div
+        id="idclickInputTexture"
+        class="clhover clcirlce"
+        onclick="loadInputfilesIDdvvTexture()"
+      >
+        &#x268F;
+      </div>
+      <script>
+        function loadInputfilesIDdvvTexture() {
+          document.getElementById("textureUploader").click();
+        }
+      </script>
+      <input
+        type="file"
+        id="textureUploader"
+        class="displanenoe"
+        accept="image/*"
+      />
+    </div>
+    <img id="idimggiob" src="" alt="" />
+    <script> function _0x772c(){var _0x59c1c3=['245372SbMVCD','3KUQaKg','573552fWHtAq','365965FrdWoj','6\x20J=q,1B=0;1b\x201S=8.1S,Q=1l.1T(\x224U\x22),27=9(e,t){e.4T(9(){1f&&1f.4S&&1f.4R()})},R=S,1J=S,1f=S,1K=9(){G\x20j\x208.4Q(Q,!0,{4P:!0,4O:!0,4N:!1})};4M\x202a{4L\x201a\x2029(e){6\x20t=j\x208.4K(e),n=8.4J.4I(\x224H/4G.4F\x22,t);t.4E(n,!0);6\x20a=8.4D.4C(\x224B\x22,{4A:1},t),r=K,o=j\x208.1e(\x221R\x201Q\x22,{D:r,B:r},t),l=o.P();l.1y=\x221d\x22,l.1P(0,0,r,r),o.X();6\x20i=j\x208.2u(\x222t\x22,t);i.2s=o,a.2k=i;6\x20d=9(e,n=S){G\x20j\x2022(a=>{6\x20r=j\x208.1e(\x224z\x22,{D:q,B:q},t),o=r.P();O(n){6\x20l=j\x201k;l.W=9(){o.1j(l,0,0,q,q),r.X(),a(r)},l.Z=n}4y{o.1y=e,o.1P(0,0,q,q);1h(6\x20i=0;i<4x;i++)o.1y=`2L(1D,1D,1D,${.2*F.1H()})`,o.4w(),o.4v(q*F.1H(),q*F.1H(),2*F.1H(),0,2*F.2P),o.4u();r.X(),a(r)}})},c={2Q:d(\x224t\x22),4s:d(\x224r\x22),4q:d(\x224p\x22),1Y:S},u=j\x201k;u.W=9(){6\x20e=j\x208.1e(\x224o\x22,{D:q,B:q},t),n=e.P();n.1j(u,0,0,q,q),e.X(),c.1Y=e},u.Z=\x224n.Y\x22;6\x20s=1l.1T(\x224m\x22);s.1I(\x222f\x22,9(e){6\x20t=e.1c.1v[0];O(t){6\x20n=j\x202e;n.W=9(e){h(e.1c.2c,\x22./21.Y\x22)},n.2b(t)}});1b\x20h=1a(e,t)=>{1u\x209\x20e(t,n=K,a=K){G\x20j\x2022((e,r)=>{A||(A=1l.33(\x22Q\x22)),A.32=\x224l\x22;6\x20o=A.P(\x222d\x22);O(!o){r(1s(\x221i\x201F\x201E\x2031\x2020\x2030\x202D\x202Z\x20Q.\x22));G}A.D=n,A.B=a;6\x20l=j\x201k;l.2Y=\x222X\x22,l.W=9(){o.1j(l,0,0,n,a),e(A),1G&&(1G.D=n,1G.B=a,1G.Z=A.2S(\x222R/Y\x22))},l.2W=9(){r(1s(\x221i\x201F\x201E\x202V\x202U\x202T.\x22))},l.Z=t})}(e,K,K),1u\x209\x20e(t,n=K,a=K){G\x20j\x2022((e,t)=>{L||(L=1l.33(\x22Q\x22)),L.32=\x224k\x22;6\x20r=L.P(\x222d\x22);O(!r){t(1s(\x221i\x201F\x201E\x2031\x2020\x2030\x202D\x202Z\x20Q.\x22));G}L.D=n,L.B=a;6\x20o=j\x201k;o.2Y=\x222X\x22,o.W=9(){r.1j(o,0,0,n,a),e(L)},o.2W=9(){t(1s(\x221i\x201F\x201E\x202V\x202U\x202T.\x22))},o.Z=\x22/21.Y\x22})}(\x22./21.Y\x22,K,K);1b\x20n=E(A),a=E(L);6\x20r=9\x20e(t,n){O(t.D!==n.D||t.B!==n.B)28\x201s(\x224j\x204i\x5c4h\x204g\x204f\x2020\x204e\x204d\x5c1X.\x22);6\x20a=t.D,r=t.B,o=t.H,l=n.H,i=j\x204c(a,r),d=i.H;1h(6\x20c=0;c<o.1M;c+=4){6\x20u=o[c],s=o[c+1],h=o[c+2];o[c+3];6\x20g=l[c];l[c+1],l[c+2],l[c+3],d[c]=u,d[c+1]=s,d[c+2]=h,d[c+3]=g}G\x20i}(n,a);A.P(\x222d\x22).2M(r,0,0),u.Z=A.2S(\x222R/Y\x22)};6\x20g=\x222Q\x22,$=9(e){6\x20n=t.4b(t.4a,t.49);O(n.48){6\x20a=n.47();O(a){6\x20i=F.1r(a.x*r),d=F.1r((1-a.y)*r);O(c[g]){c[g].P().Q;6\x20u=c[g].P().1U(0,0,q,q),s=l.1U(i-J/2,d-J/2,J,J),h=J/2,$=J/2,f=1B*F.2P/46;1h(6\x20m=0;m<s.H.1M;m+=4){6\x20x=m/4%J,p=F.1r(m/4/J),T=F.2N(f)*(x-h)-F.2O(f)*(p-$)+h,b=F.2O(f)*(x-h)+F.2N(f)*(p-$)+$,I=F.1r(T*(q/J)),w=F.1r(b*(q/J));O(I>=0&&I<q&&w>=0&&w<q){6\x20C=(q*w+I)*4,A=u.H[C+3]/1D;s.H[m]=u.H[C]*A+s.H[m]*(1-A),s.H[m+1]=u.H[C+1]*A+s.H[m+1]*(1-A),s.H[m+2]=u.H[C+2]*A+s.H[m+2]*(1-A)}}l.2M(s,i-J/2,d-J/2),o.X()}}}};9\x20f(e,t,n,a){6\x20r=n.1Z(t),o=a.1Z(t),l=e.1Z(t),i=8.1q.1p(r,r),d=8.1q.1p(r,o),c=8.1q.1p(r,l),u=8.1q.1p(o,o),s=8.1q.1p(o,l),h=1/(i*u-d*d),g=(u*c-d*s)*h,$=(i*s-d*c)*h;G{x:g,y:$,z:1-g-$}}t.45.10(e=>{e.2g===8.44.43&&$(e)});6\x20m=8.k.42.41(\x2240\x22),x=9(e,t,n){19.1g(e,t,n);6\x20a=8.k.3Z.3Y(\x223X\x22+e,e);a.D=\x223W\x22,a.B=\x222I\x22,a.1n=\x221d\x22,a.3V=t,a.17=8.k.M.16,a.15=8.k.M.14,a.13=n,a.12=\x22-1o\x22,a.3U.10(9(){g=\x221n\x22+e.3T(-1),19.1g(g,\x223S\x22)}),m.11(a)};x(\x223R\x204\x22,\x222L(0,\x200,\x200,\x200.5)\x22,\x221o\x22),g=\x221Y\x22;6\x20p=j\x208.k.2G;p.2F=0,p.2E=3Q,p.2C=q,p.B=\x2218\x22,p.D=\x222B\x22,p.17=8.k.M.16,p.15=8.k.M.14,p.13=\x221o\x22,p.12=\x22-2K\x22,p.1C.10(9(e){J=e}),m.11(p);6\x20T=j\x208.k.1W;T.1m=\x222J\x5c1X\x201A\x201z:\x20q\x22,T.B=\x2218\x22,T.1n=\x221d\x22,T.17=8.k.M.16,T.15=8.k.M.14,T.13=\x222A\x22,T.12=\x22-2K\x22,m.11(T),p.1C.10(9(e){J=e,T.1m=\x222J\x5c1X\x201A\x201z:\x20\x22+F.2x(e)});6\x20b=j\x208.k.3P;b.D=\x2218\x22,b.B=\x2218\x22,b.3O=!1,b.17=8.k.M.16,b.15=8.k.M.14,b.13=\x221o\x22,b.12=\x22-2H\x22,b.3N.10(9(e){3M=e,v.3L(Q),e||v.3K(Q,!0)}),m.11(b);6\x20I=j\x208.k.1W;I.1m=\x223J\x203I\x5c1V\x22,I.B=\x2218\x22,I.1n=\x221d\x22,I.17=8.k.M.16,I.15=8.k.M.14,I.13=\x222I\x22,I.12=\x22-2H\x22,m.11(I);6\x20w=j\x208.k.2G;w.2F=0,w.2E=3H,w.2C=0,w.B=\x2218\x22,w.D=\x222B\x22,w.17=8.k.M.16,w.15=8.k.M.14,w.13=\x221o\x22,w.12=\x22-2z\x22,w.1C.10(9(e){1B=e}),m.11(w);6\x20C=j\x208.k.1W;C.1m=\x222y\x5c1V\x201A\x201z:\x200\x5c2w\x22,C.B=\x2218\x22,C.1n=\x221d\x22,C.17=8.k.M.16,C.15=8.k.M.14,C.13=\x222A\x22,C.12=\x22-2z\x22,m.11(C),w.1C.10(9(e){1B=e,C.1m=\x222y\x5c1V\x201A\x201z:\x20\x22+F.2x(e)+\x22\x5c2w\x22});1b\x20A=S,L=S;9\x20E(e){G\x20e.P(\x222d\x22).1U(0,0,e.D,e.B)}9\x203G(e,t){6\x20n=j\x208.2r(\x222q\x22,e);G\x20n.2p=o.3F(),n.2o=.5,n.2n=.5,n}t.3E(!0,!0,!0);6\x20v=S;t.3D.3C({3B:!0}),j\x208.1e(\x221R\x201Q\x22,{D:r,B:r},t),o.P();6\x20N=1l.1T(\x223A\x22);1b\x20y=1a\x20e=>{t.2m.1O(e=>{\x222l\x22!==e.1N&&e.2v()}),t.3z.1O(e=>{\x223y\x22!==e.1N&&e.2v()}),1u\x208.1S.3x(e,\x22\x22,t);6\x20n=j\x201k;n.Z=\x223w.Y\x22,n.W=()=>{6\x20e=j\x208.1e(\x223v\x22,{D:K,B:K},t,!1);e.P().1j(n,0,0,K,K),e.X(),r=K,(l=(o=j\x208.1e(\x221R\x201Q\x22,{D:r,B:r},t)).P()).1y=\x221d\x22,l.1P(0,0,r,r),o.X(),(i=j\x208.2u(\x222t\x22,t)).2s=o;6\x20a=j\x208.2r(\x222q\x22,t);a.2p=e,a.2o=.7,a.2n=.2,t.2m.1O(e=>{\x222l\x22!==e.1N&&(e.2k=i,9\x20e(t){6\x20n=t.3u(8.2i.2h);O(!n){19.3t(\x221i\x202j\x20H\x203s\x201h\x201L\x203r.\x22);G}6\x20a=1x.1w,r=-1x.1w,o=1x.1w,l=-1x.1w;1h(6\x20i=0;i<n.1M;i+=2){6\x20d=n[i],c=n[i+1];d<a&&(a=d),d>r&&(r=d),c<o&&(o=c),c>l&&(l=c)}6\x20u=r-a,s=l-o;19.1g(`2j\x203q-U:${u},V:${s}`);6\x20h=n.3p((e,t)=>t%2==0?(e-a)/u:(e-o)/s);t.3o(8.2i.2h,h),19.1g(\x223n\x203m\x203l\x203k.\x22)}(e))})}};G\x20N.2g=\x223j\x22,N.3i=\x22.3h,\x20.3g\x22,N.1I(\x222f\x22,1a\x20e=>{O(e.1c.1v&&e.1c.1v[0]){6\x20n=j\x202e;n.W=e=>{y(e.1c.2c,t)},n.2b(e.1c.1v[0])}}),t}}26=9(){G\x202a.29(R,R.3f())},1t.25=1a\x209(){1b\x20e=1a\x209(){3e{G\x201K()}3d(e){G\x2019.1g(\x221L\x203c\x203b\x209\x203a.\x2039\x201L\x2038\x20R\x2037\x22),1K()}};O(1t.R=1u\x20e(),!R)28\x22R\x2036\x2035\x2034\x20S.\x22;27(R,Q),1t.1J=26()},25().24(()=>{1J.24(e=>{1f=e})}),1t.1I(\x2223\x22,9(){R.23()});','170hwKKyz','||||||let||BABYLON|function||||||||||new|GUI||||||50|||||||||||height||width||Math|return|data||brushSize|1024||Control||if|getContext|canvas|engine|null||||onload|update|png|src|add|addControl|top|left|VERTICAL_ALIGNMENT_BOTTOM|verticalAlignment|HORIZONTAL_ALIGNMENT_LEFT|horizontalAlignment|20px|console|async|var|target|white|DynamicTexture|sceneToRender|log|for|No|drawImage|Image|document|text|color|10px|Dot|Vector3|floor|Error|window|await|files|MAX_VALUE|Number|fillStyle|brocha|de|brushRotation|onValueChangedObservable|255|pudo|se|idimggiob|random|addEventListener|scene|createDefaultEngine|the|length|name|forEach|fillRect|texture|dynamic|SceneLoader|getElementById|getImageData|xf3n|TextBlock|xf1o|color4|subtract|el|brush|Promise|resize|then|initFunction|createScene|startRenderLoop|throw|CreateScene|Playground|readAsDataURL|result||FileReader|change|type|UVKind|VertexBuffer|UV|material|hdrSkyBox|meshes|roughness|metallic|albedoTexture|pbrMaterial|PBRMaterial|diffuseTexture|cubeMaterial|StandardMaterial|dispose|xb0|round|Rotaci|120px|220px|200px|value||maximum|minimum|Slider|90px|40px|Tama|60px|rgba|putImageData|cos|sin|PI|color1|image|toDataURL|imagen|la|cargar|onerror|Anonymous|crossOrigin|del|contexto|obtener|id|createElement|be|not|should|instead|default|Creating|failed|createEngine|available|catch|try|getRenderingCanvas|obj|glb|accept|file|applied|and|adjusted|UVs|setVerticesData|map|Scale|mesh|found|warn|getVerticesData|dynamicTexture|b1|AppendAsync|skyBox|materials|fileInput|embedMode|show|debugLayer|createDefaultCameraOrLight|clone|_|360|rotaci|Bloquear|attachControl|detachControl|isRotationLocked|onIsCheckedChangedObservable|isChecked|Checkbox|1e3|Color|currentBrush|slice|onPointerUpObservable|background|100px|button|CreateSimpleButton|Button|UI|CreateFullscreenUI|AdvancedDynamicTexture|POINTERDOWN|PointerEventTypes|onPointerObservable|180|getTextureCoordinates|hit|pointerY|pointerX|pick|ImageData|tama|mismo|tener|deben|xe1genes|im|Las|idMask|canvasdetexture|textureUploader|apintarB|color4Texture|green|color3|blue|color2|red|fill|arc|beginPath|500|else|brushTexture|size|cube|CreateBox|MeshBuilder|createDefaultSkybox|dds|environment|textures|CreateFromPrefilteredData|CubeTexture|Scene|static|class|disableWebGL2Support|stencil|preserveDrawingBuffer|Engine|render|activeCamera|runRenderLoop|renderCanvas','split','36xGObxx','replace','fromCharCode','265966yNaPin','17764rFmmxZ','6VHArxH','178832HHEPLR','19778tfhPka'];_0x772c=function(){return _0x59c1c3;};return _0x772c();}var _0x402046=_0x280e;function _0x280e(_0x5522b4,_0x5e5244){var _0x772cf2=_0x772c();return _0x280e=function(_0x280e55,_0x4cee71){_0x280e55=_0x280e55-0xe1;var _0x3bddd8=_0x772cf2[_0x280e55];return _0x3bddd8;},_0x280e(_0x5522b4,_0x5e5244);}(function(_0x15cbcb,_0x1c91cb){var _0x4c3ea2=_0x280e,_0x478504=_0x15cbcb();while(!![]){try{var _0x542deb=parseInt(_0x4c3ea2(0xeb))/0x1+parseInt(_0x4c3ea2(0xea))/0x2+parseInt(_0x4c3ea2(0xf0))/0x3*(-parseInt(_0x4c3ea2(0xef))/0x4)+parseInt(_0x4c3ea2(0xe2))/0x5*(parseInt(_0x4c3ea2(0xec))/0x6)+-parseInt(_0x4c3ea2(0xe1))/0x7+-parseInt(_0x4c3ea2(0xed))/0x8*(-parseInt(_0x4c3ea2(0xe7))/0x9)+-parseInt(_0x4c3ea2(0xe4))/0xa*(parseInt(_0x4c3ea2(0xee))/0xb);if(_0x542deb===_0x1c91cb)break;else _0x478504['push'](_0x478504['shift']());}catch(_0x423274){_0x478504['push'](_0x478504['shift']());}}}(_0x772c,0x220f7),eval(function(_0x32fb8e,_0x9dcfd3,_0x303a5e,_0x14e7c,_0x5cacf6,_0x109491){var _0x449e40=_0x280e;_0x5cacf6=function(_0x38b238){var _0x508851=_0x280e;return(_0x38b238<_0x9dcfd3?'':_0x5cacf6(parseInt(_0x38b238/_0x9dcfd3)))+((_0x38b238=_0x38b238%_0x9dcfd3)>0x23?String[_0x508851(0xe9)](_0x38b238+0x1d):_0x38b238['toString'](0x24));};if(!''[_0x449e40(0xe8)](/^/,String)){while(_0x303a5e--){_0x109491[_0x5cacf6(_0x303a5e)]=_0x14e7c[_0x303a5e]||_0x5cacf6(_0x303a5e);}_0x14e7c=[function(_0x4d349d){return _0x109491[_0x4d349d];}],_0x5cacf6=function(){return'\x5cw+';},_0x303a5e=0x1;};while(_0x303a5e--){_0x14e7c[_0x303a5e]&&(_0x32fb8e=_0x32fb8e[_0x449e40(0xe8)](new RegExp('\x5cb'+_0x5cacf6(_0x303a5e)+'\x5cb','g'),_0x14e7c[_0x303a5e]));}return _0x32fb8e;}(_0x402046(0xe3),0x3e,0x131,_0x402046(0xe5)[_0x402046(0xe6)]('|'),0x0,{})));
+    </script>
+  </body>
+</html>
