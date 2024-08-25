@@ -240,6 +240,8 @@ var laimagneesCombiandases = async (url1, url2) => {
             width = 1024,
             height = 1024
           ) {
+
+            console.log(imageUrl ,' ruta loadAndResizeImageMarsk');
             return new Promise((resolve, reject) => {
               if (!canvasidMask) {
                 canvasidMask = document.createElement("canvas");
