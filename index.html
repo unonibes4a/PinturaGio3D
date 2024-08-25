@@ -151,6 +151,26 @@
         class="displanenoe"
         accept="image/*"
       />
+
+
+      <div id="idshlayer" onclick="fclicklayerbabylon()"></div>
+      <script>
+        var booLayerShow=false;
+        function fclicklayerbabylon(){
+            if(booLayerShow){
+
+               
+BABYLON.Engine.LastCreatedScene.debugLayer.show({ embedMode: true });
+            }
+            else{
+
+                BABYLON.Engine.LastCreatedScene.debugLayer.hide();
+ 
+            }
+            booLayerShow=!booLayerShow;
+ 
+        }
+      </script>
     </div>
     <img id="idimggiob" class="imfMostrar1" src="" alt="" />
     <script>
@@ -921,7 +941,7 @@ var laimagneesCombiandases = async (url1, url2) => {
 
           scene.createDefaultCameraOrLight(true, true, true);
           let camera = null;
-          scene.debugLayer.show({ embedMode: true });
+      
           const textureResolution4 = 1024;
           const dynamicTexture3 = new BABYLON.DynamicTexture(
             "dynamic texture",
