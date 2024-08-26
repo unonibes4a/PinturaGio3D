@@ -29,6 +29,7 @@
     <style>
       html,
       body {
+        position: absolute;
         overflow: hidden;
         width: 100%;
         height: 100%;
@@ -108,10 +109,109 @@
         height: 130px;
         background-color: #000000b6;
       }
+
+      #idinfoDev{
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        width: 100%;
+        height: 100%;
+        transform: translate(0%,0%);
+        display: none;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	align-items: center;
+	align-content: center;
+    border: 2px solid #bbbbbb;
+border-radius: 15px;
+
+color: #ffffff;
+
+background-color: #000000c7;
+ z-index: 2000;
+
+      }
+
+      .movimiento {
+  position: fixed;  
+  bottom: 0;  
+  width: 70px; 
+  height: 23px;  
+  -webkit-box-shadow:0px 0px 157px 26px rgba(54,175,255,0.9);
+-moz-box-shadow: 0px 0px 157px 26px rgba(54,175,255,0.9);
+box-shadow: 0px 0px 157px 26px rgba(54,175,255,0.9);  
+  animation: movimiento 5s infinite;  
+}
+
+@keyframes movimiento {
+  0% {
+    left: 0;  
+  }
+  50% {
+    left: calc(100% - 70px);  
+  }
+  100% {
+    left: 0; 
+  }
+}
+
+.movimiento-vertical {
+  position: fixed;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 23px;
+  height: 70px;
+  -webkit-box-shadow:0px 0px 157px 26px rgba(54,175,255,0.9);
+  -moz-box-shadow: 0px 0px 157px 26px rgba(54,175,255,0.9);
+  box-shadow: 0px 0px 157px 26px rgba(54,175,255,0.9);
+  animation: movimiento-vertical 5s infinite;
+}
+
+@keyframes movimiento-vertical {
+  0% {
+    top: 0;
+  }
+  50% {
+    top: calc(100% - 70px);
+  }
+  100% {
+    top: 0;
+  }
+}
+
+.infoImgBack{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: -1;
+/*     width: 1024;
+    height: 1024; */
+}
+.spanclaslabel{
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translate(0%,-50%);
+    z-index: -1;
+    width: 1024;
+    height: 1024; 
+    font-size: 40px;
+    width: 120px;
+    height: auto;
+}
     </style>
   </head>
 
   <body>
+    <div id="idinfoDev"> <img class="infoImgBack" src="info.png" alt=""> <span class="spanclaslabel">Enterprise Giovanni Rodriguez Diaz </span>  <div class="movimiento"></div> <div class="movimiento-vertical"></div> </div>
+   <script>
+
+ 
+    
+   </script>
     <div id="canvasZone"><canvas id="renderCanvas"></canvas></div>
 
     <div id="idpaneldecontrol2">
@@ -172,8 +272,910 @@ BABYLON.Engine.LastCreatedScene.debugLayer.show({ embedMode: true });
         }
       </script>
     </div>
-    <img id="idimggiob" class="imfMostrar1" src="" alt="" />
-    <script> (function(_0x110352,_0x3990e0){var _0x346a83=_0x3c33,_0x53ae47=_0x110352();while(!![]){try{var _0x4b7d4a=-parseInt(_0x346a83(0x2f3))/0x1*(-parseInt(_0x346a83(0x2fb))/0x2)+parseInt(_0x346a83(0x235))/0x3+parseInt(_0x346a83(0x305))/0x4+-parseInt(_0x346a83(0x208))/0x5*(-parseInt(_0x346a83(0x169))/0x6)+parseInt(_0x346a83(0x15e))/0x7*(-parseInt(_0x346a83(0x331))/0x8)+-parseInt(_0x346a83(0x18d))/0x9*(-parseInt(_0x346a83(0x226))/0xa)+-parseInt(_0x346a83(0x2d8))/0xb;if(_0x4b7d4a===_0x3990e0)break;else _0x53ae47['push'](_0x53ae47['shift']());}catch(_0x42496d){_0x53ae47['push'](_0x53ae47['shift']());}}}(_0x3958,0x7d9f3));var _0x5638f7=_0x239b;function _0x3c33(_0x3c6f5d,_0x4085fd){var _0x3958b6=_0x3958();return _0x3c33=function(_0x3c336c,_0x37f8b2){_0x3c336c=_0x3c336c-0x127;var _0x5ccd7f=_0x3958b6[_0x3c336c];return _0x5ccd7f;},_0x3c33(_0x3c6f5d,_0x4085fd);}function _0x3958(){var _0x1ca69f=['2h.2g(O,O.','S()})`,n.2','ground|rea',',!0,!0);6\x20','\x201J\x201I\x2034\x20','(){r.1A(o,','(6\x20m=0;m<u','t.J();n.1f','d|instead|',':r},t)).J(',':\x20\x22+q.2E(e','t(\x224X\x204W\x5c4','60|rotaci|','||startRen','(O,M),1u.1','E(e)+\x22\x5c2C\x22','glb|accept','\x222d\x22).2S(r','Scene|Play','interY|poi','loadAndRes','=>{6\x20e=j\x208','2*q.21),a.','e))})}};D\x20','2p\x20E\x203F\x201d','Y\x22,n.1c=()','\x22,T.1n=\x221e',');L(b>=0&&',',i.1z(0,0,','e|maximum|','aSkJu','t,n,a){6\x20r','858835dAPmyx',',0,0),1s.1','utton|Butt','UpObservab','p=P;j\x208.X(','\x222z\x22,t);l.','`);6\x20g=n.3','j\x208.w.2M;I','$.2L=0,$.2','f.A=\x2217\x22,f',',G),e.W(),','W=19(e,t)=','r),o.W();6','.2L=0,I.2K','|engine|nu','F),g=F/2,h','4\x2033\x2032.\x22)','2r\x22!==e.1P','){6\x20x=m/4%','onValueCha','=8.w.H.13,','===8.4d.4c',',4G:!0,4F:','h,y:$,z:1-','9\x20e(t){6\x20n','slEGk','i(t)}});6\x20','Texture|PO','1w&&e.1b.1','8\x22),j\x203d((','3492560qqQFyb','.1m=\x222P\x5c1X','.1z(0,0,r,','(\x222d\x22).22(','=t.3H(8.2o',']=s.E[C+1]','-g)+q.2T($','smo|tener|','le|backgro','name|forEa','2f\x22O\x203j\x203i','=a.20(t),i','derLoop|th','horizontal','on|UI|Crea','1916793ZxCsIs','N.Q(\x221N\x203p','.S(),2*q.S','3m\x201N\x203l\x20O','=e,n.1z(0,',');6\x20n=j\x201B','|sceneToRe','l=q.1r(a.x','.Z(9(){c=\x22','51400UqnrAs','G(\x224x\x22),1Y','.B=t,1K.A=','eserveDraw','Canvas|col','nt|text|co','=1l.1U(\x223N','ngedObserv','2o.2n,g),N','or4Image|E','NTAL_ALIGN','(R)},o.35=','=3Q,I.2J=0','DcdiW','e|idimggio','les|MAX_VA','w\x22,e);D\x20n.','){r(1t(\x221k','h-$}}t.4e.',')-q.2U($)*','1k\x201J\x201I\x203','ynamicText','2i(e.1b.1w',':r,A:r},t)','INTERDOWN|','\x20c=r[d],s=','PointerEve','1n\x22+e.42(-','|cube|Crea','und|100px|','j\x202k;n.1c=','.M;6\x20s=1h[','8FWchQp','enes|im|La','\x221k\x201J\x201I\x20','1E=e}),g.1','D}6\x20a=1y.1','hkVsf','}),g.10(x)','40px|Tama|','ta|tama|mi','xnFSo','teDefaultC','E[m+2]*(1-','x|1e3|Colo','1P&&e.2B()','|then|init','anvas|obj|','utImageDat','\x22!==e.1P&&','reateScene',',r),d=8.1q','1B;i.37=\x223',',a.2u=.7,a','le|isCheck','6\x20d=n[l],c','2y=o,a.2q=','.1W;f.1m=\x22','ment|Promi','A=n;6\x20i=j\x20','=8.1q.1p(o','=8.1q.1p(r','.1f=\x221e\x22,i','0\x204\x22,\x221Z(0','n=j\x208.X(\x222','olor2|red|','(e,t=G,n=G','fill|arc|b','(e){6\x20n=t.','rsk|resize','Bloquear|a',',l-F/2,d-F','\x5cw+','0px|220px|','.E.1O;m+=4','/4/F),I=q.','rror|windo','reCoordina','Engine|ava','Textureant','ked|onIsCh','.10(m),$.1','Alignment|','ardMateria','.11=\x22-2Q\x22,','ontext|can',',m.A=\x2217\x22,','1m=\x222F\x5c1V\x20','.Q(\x223A\x203z\x20','OTTOM|vert','4k(t.4j,t.','=j\x208.2x(\x222',';6\x20a=8.4q.',');1d(6\x20r=0',';L(t){6\x20n=','}),1v\x208.1T','(e=8.1H.24','able|crear','&1i.4J&&1i','[C+2]*v+u.','\x20l=j\x208.2A(','25\x22,{B:k,A','.2Y(k*q.S(','ch|try|get','ameraOrLig','{\x223L\x22!==e.','B\x22),4A:1G(',',l=i.E;1d(','`1Z(18,18,','hRotation|','magneesCom','|dynamic|S','|50||||||M','{1j.2a(e=>','addControl','27(K),a=27','q.21/4f;1d','shTextures','Image|broc','4w.4v(\x224u/',';r<30;r++)','}}};9\x20u(e,','4K(9(){1i&','replace','hange|type','6\x22,i.1c=9(','oGoJI','.1O;l+=2){','getImageDa','.E,o=t.E,i','amicTextur','!o){r(1t(\x22','){D\x20j\x203d((',';6\x20a=8.w.4','p.3T(M,!0)','\x22,x.3W.Z(9','N.Q(e,t,n)','20px|255|a','n,\x2225\x22);6\x20','T.12=\x222H\x22,','[d+2];r[d+','|file|appl','Scene|stat','imagen|la|','rtexBuffer','8.w.3Y;x.B','hhVby',',a.1f=e,a.','e,e);a.B=\x22','91378lbmCRr','E[m+2]=s.E','ath||||||G','a.1f=`1Z(1','terial|dif','12296548oHsjix','ubeTexture','a|brushSiz','nder|scene','){F=e}),g.','0(I);6\x20T=j','te|fillSty','1=\x22-2N\x22,g.','.15,m.14=8','zeImage|be','ilable|cat','.16=8.w.H.',',o.J();6\x20C','{1i=e})}),','2y=o;6\x20a=j','rial|PBRMa','u);t.3B(8.',')});',')},i.35=9(','[d+2],o[d+','\x22);6\x20n=e.B','icalAlignm','ed|Checkbo','D\x2038\x20M.\x22))','12=n,a.11=','endAsync|s','b<k&&p>=0&','26645FczrvF','60px|300|p','h{4D\x2019\x202g','\x22);1a\x20v=19',')*(f-h)+h,','F,f=q.1r(m','RenderingC','C.3v=\x22.3u,','70jdYbKo','lUHGA','esData|map','hitpQ','1b.2j,\x22./2','%2==0?(e-a','OskRd','(),0,2*q.2','q.2U($)*(x','ingBuffer|','49500tdeVVU','(\x22./23.Y\x22,','=-1y.1x;1d','\x204S\x204R\x5c1X.','0|getTextu','\x201C:\x20\x22+q.2','.2*q.S()})','ontrol|isR','\x22,{B:k,A:k','r,r),o.W()','F.Z(9(e){F','\x20e=>{t.2s.','LIGNMENT_B','t.4r(n,!0)','or3|blue|c','r[d+1],u=r','8,18,18,${','10($);6\x20m=','$.1F.Z(9(e','ta|brush|L','1464381HytPRD','roughness|','36\x22,o.1c=9','/2),o.W()}','w.H.15,x.1',',I.A=\x2217\x22,','1D\x201C:\x200\x5c2','l|dispose|','obtener|id','l|gettImag','al|hdrSkyB','=n[l+1];d<','ot|Vector3','e.2B()}),t','|top|left|','|green|col','u=i-o;N.Q(','push',',i.1g=e})}','15,I.14=8.','hTexture|e',';d.1L(\x222l\x22','v=s.E[C+3]','3.Y\x22})}9\x202','16mHSMgD','deben|xe1g','3],l[d]=c,','Q(e,\x22\x204Z\x202','default|Cr','astCreated','m.Y\x22;6\x20d=1','aemEL','2911732hWUwRP','4t.4s\x22,t);','j\x208.w.1W;m','J(\x222d\x22);L(','=e,m.1m=\x222','v)}}i.2S(u','.w.H.13,m.','oDataURL|l','s|idMask|r','update|Dyn','(!r){a(1t(','0,0,e.B,e.','*c)*g;D{x:','15,f.14=8.','h|found|wa','},8.1H.24)','>r&&(r=d),','1a\x20e=19\x209(','edObservab','\x20g=8.w.4b.','\x2038\x20M.\x22));',',o=1y.1x,i','|textureUp','.w.H.13,a.','2T($)*(x-g','(e){3V=e,p',')});6\x20x=j\x20','es|ImageDa','11=\x22-2Q\x22,g','\x221S\x201R\x22,{B','C.2m=\x223w\x22,','O\x22,a.1n=\x221','4p(\x224o\x22,{4','l,1s.1g=\x224','c<o&&(o=c)','(f-h)+g,T=','3257118MEmGIG','=9(e,t,n){','2v=o.3P(),','4|3|1|2|5|','Origin|del','ZqMkB','n.2u=.5,n.','ad|for|whi','justed|UVs','=>{L(e.1b.','dAsDataURL','ch|texture','\x201D\x201C:\x20k\x22',';n.1g=\x223J.','=\x222F\x5c1V\x201D','trol||getC','rror|Anony','a.16=8.w.H','a,r)=>{K||',')},o.1g=\x222','.15,a.14=8','9\x2028(e,t=G','or4Texture','G,G);1a\x20n=','|fillRect|',':P};6\x20n=8.','n,1K.1g=K.','ateSimpleB','}2c=9(){D\x20','metallic|a','4=8.w.H.13','se|image|t','rial|Stand','uta','2b=19\x209(){','3a\x2026\x2039\x202','ttachContr','loader|api','|UV|materi','(R=1l.3c(\x22','|||||||new','V\x204U\x204T\x2026','.X(\x223I\x22,{B','|onPointer','g,$=(l*u-d','&&s(e)});6','k/F)),p=q.','{1E=e,T.1m','\x224Y\x22;6\x20r=R','izeImageMa','(e){6\x20t=j\x20','|Rotaci|12','=9(e,t){e.','e|cubeMate','drawImage|','reateDefau','otationLoc','sync|var|t','ntarB|size','9(){a(1t(\x22','MENT_LEFT|','H.15,$.14=','T.11=\x22-2G\x22','ent|textur','b|addEvent','1v\x20e(),!O)','}),t.3O(!0','(s*c-d*u)*','3457265vuZtXX','minimum|Sl','s.1Q(e=>{\x22','leReader|c','}9\x204P(e){6','|result|Fi',',k,k),t.W(',',0,t,n),a(','xb0||round','*r),d=q.1r','hContext|c','24SUfHao','3f(\x223e/Y\x22)','.12=\x221o\x22,$','(\x222z\x22,t)).','tById|xf3n','BnAbp','|BABYLON|f','r4|rgba|su','row|Create','1r(T*(k/F)','\x22K\x22;6\x20o=K.','e=>{v(e.1b','nterX|pick','33\x2032.\x22))}','l[d+1]=s,l','=t.B||e.A!','=0;1a\x201T=8','L2Support|','isableWebG','7(e){D\x20e.J','r=G,(i=(o=','\x208.w.1W;9\x20','18,${.2*q.','ol|detachC','1O;d+=4){6','v),u.E[m+1','{N.3G(\x221k\x20','cWAgW','M\x22)),K.3b=','k},t);N.Q(','e.1b.1w[0]','6\x20a=0;a<30','D\x20j\x208.1H(M','79974rtNfmG','1F.Z(9(e){','ntTypes|on','9YbHlZV','=e.20(t),l','fuseTextur','(R);6\x20r=31','45\x22,a.A=\x222','.1T,M=1l.1','0,0,k,k),u','random||||','3.Y\x22)},n.2','VERTICAL_A','*v+u.E[m+1','eating|fai','1A(n,0,0,G','G,G),1v\x2028','2,d-F/2,F,',',\x200,\x200,\x200.','ht|clone|3','.2t=.2,t.2',',i),g=1/(l','|createEle','=\x2217\x22,x.A=','oop|render','ltEngine|t','.1p(r,o),c','c=\x222V\x22,s=9','ine|pudo|s','rn|getVert','||||||let|','m.1n=\x221e\x22,','shift','|Scale|mes','cargar|one',',9(){O.29(','P\x5c1X\x201D\x201C','render|act','e,a)=>{R||','=j\x204Q(n,a)','(k*p+b)*4,','3S\x203R\x5c1V\x22,','35rSeoKH','!1);e.J().','.J(\x222d\x22);L','}};L(1u.O=','UI||||heig','button|Cre','23156770MzaCjn',';6\x20F=2R,1E','/18;u.E[m]','j\x204N\x22);6\x20t','\x203o\x209\x203n.\x20','];o[d+1],o','3];6\x20g=o[d',';a++)n.1f=','C\x22,T.A=\x2217','.1n=\x221e\x22,f','endataGio|','\x22-1o\x22,a.43','3y\x203x.\x22)}(','){3r{D\x201M(','.1F.Z(9(e)','tSkybox|dd','re|if|canv','t){L(e.B!=','a|cos|sin|','ceneLoader','oOnDk','tbqxp','(),n}1a\x201h','.1H.24){6\x20','romPrefilt','w|await|fi','n:1},t),r=','b(e,t){6\x20n','9\x201G(e,t=8','9(e){2W(e.','s|environm','1=\x22-2G\x22,I.','ervable|18','icesData|d','.H.15,T.14','split','\x20t=j\x208.X(\x22','iveCamera|','((1-a.y)*r','10(f);6\x20I=','\x22,T.16=8.w','\x20.3t\x22,C.1L','a&&(a=d),d',',!0,{4H:!0','!1})};4E\x202','Z(),n.2Y(k'];_0x3958=function(){return _0x1ca69f;};return _0x3958();}(function(_0x50ebf8,_0x3ec118){var _0x4b243f=_0x3c33,_0x5e985e=_0x239b,_0x19cded=_0x50ebf8();while(!![]){try{var _0x22c329=parseInt(_0x5e985e(0x45d))/(0x2384*0x1+0x2107+-0x3e*0x11b)+-parseInt(_0x5e985e(0x439))/(-0x1e5*0x1+0x237*-0x9+0x2*0xaeb)+parseInt(_0x5e985e(0x31b))/(0x4a0*-0x1+-0x283*-0x9+-0x11f8)+-parseInt(_0x5e985e(0x3b5))/(0xa4+-0x2*-0xcbf+0x1a1e*-0x1)*(parseInt(_0x5e985e(0x36c))/(-0x137*-0xb+-0x3*0x96b+0xee9))+parseInt(_0x5e985e(0x27c))/(-0xa83+0x67*0x23+-0x38c)*(-parseInt(_0x5e985e(0x1f0))/(-0x351*0x2+-0x39f+0xa48))+-parseInt(_0x5e985e(0x30f))/(-0x5cd+-0x3cd*0xa+0x2bd7)*(parseInt(_0x5e985e(0x430))/(0xcb6+-0x2*0x4dc+-0x2f5))+parseInt(_0x5e985e(0x395))/(-0x8a9*-0x2+0x201d+-0x3165);if(_0x22c329===_0x3ec118)break;else _0x19cded[_0x4b243f(0x32a)](_0x19cded['shift']());}catch(_0x46fee5){_0x19cded[_0x4b243f(0x32a)](_0x19cded[_0x4b243f(0x1aa)]());}}}(_0x2e41,0x20ec3*-0x7+-0x3b69d+-0x5e27d*-0x5),eval(function(_0x12d5f2,_0x2f7d01,_0x2be062,_0x4562b2,_0x341fd4,_0x4ebfa7){var _0x31879f=_0x239b,_0x25fb52={'aemEL':_0x31879f(0x290)+'0','oGoJI':function(_0x233601,_0x52323d){return _0x233601(_0x52323d);},'xnFSo':function(_0x293f90,_0x60c19c){return _0x293f90+_0x60c19c;},'ZqMkB':function(_0x163847,_0x501875){return _0x163847<_0x501875;},'hhVby':function(_0xa77a42,_0x2f73d1){return _0xa77a42(_0x2f73d1);},'OskRd':function(_0x18d6c3,_0x34fa86){return _0x18d6c3/_0x34fa86;},'hkVsf':function(_0x50ab5d,_0x1f5120){return _0x50ab5d>_0x1f5120;},'cWAgW':function(_0x580eb4,_0x25f329){return _0x580eb4%_0x25f329;},'DcdiW':_0x31879f(0x2ca),'tbqxp':function(_0x4b5c55,_0x119def){return _0x4b5c55+_0x119def;},'wqiYN':function(_0x29cb79,_0x43e921){return _0x29cb79(_0x43e921);}},_0x131cfe=_0x25fb52[_0x31879f(0x17d)][_0x31879f(0x27b)]('|'),_0xeda0ba=0xe0f+0x1c*-0x94+0x221;while(!![]){switch(_0x131cfe[_0xeda0ba++]){case'0':return _0x12d5f2;case'1':if(!''[_0x31879f(0x3c1)](/^/,String)){while(_0x2be062--){_0x4ebfa7[_0x25fb52[_0x31879f(0x294)](_0x341fd4,_0x2be062)]=_0x4562b2[_0x2be062]||_0x25fb52[_0x31879f(0x294)](_0x341fd4,_0x2be062);}_0x4562b2=[function(_0x417dc9){return _0x4ebfa7[_0x417dc9];}],_0x341fd4=function(){var _0x538ea8=_0x31879f;return _0x257ac5[_0x538ea8(0x25a)];},_0x2be062=-0x1a53+0x12*0x168+0x104;}continue;case'2':;continue;case'3':_0x341fd4=function(_0x24610e){var _0x3d1250=_0x31879f;return _0x257ac5[_0x3d1250(0x391)](_0x257ac5[_0x3d1250(0x377)](_0x24610e,_0x2f7d01)?'':_0x257ac5[_0x3d1250(0x326)](_0x341fd4,_0x257ac5[_0x3d1250(0x260)](parseInt,_0x257ac5[_0x3d1250(0x2c7)](_0x24610e,_0x2f7d01))),_0x257ac5[_0x3d1250(0x1cd)](_0x24610e=_0x257ac5[_0x3d1250(0x411)](_0x24610e,_0x2f7d01),-0x886+0xb93*0x1+-0x1*0x2ea)?String[_0x3d1250(0x1ae)+'de'](_0x257ac5[_0x3d1250(0x391)](_0x24610e,-0x1*-0xea9+0xe77+-0x425*0x7)):_0x24610e[_0x3d1250(0x29a)](-0x3*0x971+0x1*-0xc7a+-0x2f*-0xdf));};continue;case'4':var _0x257ac5={'slEGk':function(_0x300f08,_0x3a63b){var _0x242648=_0x31879f;return _0x25fb52[_0x242648(0x24e)](_0x300f08,_0x3a63b);},'WLUWJ':function(_0x45b949,_0x437e46){var _0x5bd654=_0x31879f;return _0x25fb52[_0x5bd654(0x34a)](_0x45b949,_0x437e46);},'oOnDk':function(_0xf4237b,_0x291ef0){var _0x34d07f=_0x31879f;return _0x25fb52[_0x34d07f(0x294)](_0xf4237b,_0x291ef0);},'aSkJu':function(_0x39e878,_0x1fc8cf){var _0x5069c2=_0x31879f;return _0x25fb52[_0x5069c2(0x39c)](_0x39e878,_0x1fc8cf);},'lUHGA':function(_0x1301f5,_0x2a87a3){var _0x211916=_0x31879f;return _0x25fb52[_0x211916(0x360)](_0x1301f5,_0x2a87a3);},'DXVlc':function(_0xf18c8a,_0x4e0451){var _0x210982=_0x31879f;return _0x25fb52[_0x210982(0x454)](_0xf18c8a,_0x4e0451);},'hitpQ':function(_0x44b0dc,_0x14117c){var _0x58c06e=_0x31879f;return _0x25fb52[_0x58c06e(0x415)](_0x44b0dc,_0x14117c);},'BnAbp':_0x25fb52[_0x31879f(0x1a9)]};continue;case'5':while(_0x2be062--){_0x4562b2[_0x2be062]&&(_0x12d5f2=_0x12d5f2[_0x31879f(0x3c1)](new RegExp(_0x25fb52[_0x31879f(0x3a9)](_0x25fb52[_0x31879f(0x24e)]('\x5cb',_0x25fb52[_0x31879f(0x1c9)](_0x341fd4,_0x2be062)),'\x5cb'),'g'),_0x4562b2[_0x2be062]));}continue;}break;}}(_0x5638f7(0x406)+_0x5638f7(0x32a)+_0x5638f7(0x39e)+_0x5638f7(0x432)+_0x5638f7(0x3b4)+_0x5638f7(0x275)+_0x5638f7(0x229)+_0x5638f7(0x3c3)+_0x5638f7(0x262)+_0x5638f7(0x24a)+_0x5638f7(0x450)+_0x5638f7(0x362)+_0x5638f7(0x2c4)+_0x5638f7(0x188)+_0x5638f7(0x2b1)+_0x5638f7(0x2c5)+_0x5638f7(0x2fe)+_0x5638f7(0x25c)+_0x5638f7(0x3f1)+_0x5638f7(0x21d)+_0x5638f7(0x1d8)+_0x5638f7(0x254)+_0x5638f7(0x248)+_0x5638f7(0x195)+_0x5638f7(0x434)+_0x5638f7(0x34d)+_0x5638f7(0x259)+_0x5638f7(0x2a3)+_0x5638f7(0x1d7)+_0x5638f7(0x27d)+_0x5638f7(0x17a)+_0x5638f7(0x28d)+_0x5638f7(0x2e4)+_0x5638f7(0x239)+_0x5638f7(0x431)+_0x5638f7(0x249)+_0x5638f7(0x24d)+_0x5638f7(0x288)+_0x5638f7(0x458)+_0x5638f7(0x1b8)+_0x5638f7(0x3a2)+_0x5638f7(0x1c3)+_0x5638f7(0x3da)+_0x5638f7(0x1fa)+_0x5638f7(0x1aa)+_0x5638f7(0x2b8)+_0x5638f7(0x3a1)+_0x5638f7(0x309)+_0x5638f7(0x1dc)+_0x5638f7(0x2a6)+_0x5638f7(0x393)+_0x5638f7(0x1c0)+_0x5638f7(0x441)+_0x5638f7(0x31c)+_0x5638f7(0x3b6)+_0x5638f7(0x2a8)+_0x5638f7(0x286)+_0x5638f7(0x347)+_0x5638f7(0x3f2)+_0x5638f7(0x2e7)+_0x5638f7(0x2e3)+_0x5638f7(0x248)+_0x5638f7(0x207)+_0x5638f7(0x2c3)+_0x5638f7(0x1b2)+_0x5638f7(0x3f9)+_0x5638f7(0x2ea)+_0x5638f7(0x333)+_0x5638f7(0x1de)+_0x5638f7(0x1bb)+_0x5638f7(0x2be)+_0x5638f7(0x1c7)+_0x5638f7(0x3fb)+_0x5638f7(0x233)+_0x5638f7(0x1fd)+_0x5638f7(0x209)+_0x5638f7(0x3d4)+_0x5638f7(0x1e8)+_0x5638f7(0x474)+_0x5638f7(0x35d)+_0x5638f7(0x39b)+_0x5638f7(0x217)+_0x5638f7(0x2cb)+_0x5638f7(0x1d0)+_0x5638f7(0x350)+_0x5638f7(0x306)+_0x5638f7(0x338)+_0x5638f7(0x331)+_0x5638f7(0x1c4)+_0x5638f7(0x40c)+_0x5638f7(0x211)+_0x5638f7(0x226)+_0x5638f7(0x39a)+_0x5638f7(0x1cb)+_0x5638f7(0x329)+_0x5638f7(0x27f)+_0x5638f7(0x19e)+_0x5638f7(0x278)+_0x5638f7(0x261)+_0x5638f7(0x29b)+(_0x5638f7(0x366)+_0x5638f7(0x24f)+_0x5638f7(0x3bd)+_0x5638f7(0x419)+_0x5638f7(0x22b)+_0x5638f7(0x43c)+_0x5638f7(0x351)+_0x5638f7(0x307)+_0x5638f7(0x238)+_0x5638f7(0x3c7)+_0x5638f7(0x34c)+_0x5638f7(0x1f5)+_0x5638f7(0x3b8)+_0x5638f7(0x17e)+_0x5638f7(0x3d6)+_0x5638f7(0x1ba)+_0x5638f7(0x386)+_0x5638f7(0x42e)+_0x5638f7(0x241)+_0x5638f7(0x2fa)+_0x5638f7(0x1da)+_0x5638f7(0x23c)+_0x5638f7(0x240)+_0x5638f7(0x3a4)+_0x5638f7(0x37e)+_0x5638f7(0x28c)+_0x5638f7(0x34f)+_0x5638f7(0x2b5)+_0x5638f7(0x412)+_0x5638f7(0x273)+_0x5638f7(0x38d)+_0x5638f7(0x184)+_0x5638f7(0x409)+_0x5638f7(0x36b)+_0x5638f7(0x27e)+_0x5638f7(0x43d)+_0x5638f7(0x31e)+_0x5638f7(0x296)+_0x5638f7(0x2c6)+_0x5638f7(0x380)+_0x5638f7(0x2b4)+_0x5638f7(0x1ec)+_0x5638f7(0x428)+_0x5638f7(0x46e)+_0x5638f7(0x3f7)+_0x5638f7(0x3dd)+_0x5638f7(0x421)+_0x5638f7(0x47a)+_0x5638f7(0x291)+_0x5638f7(0x18d)+_0x5638f7(0x197)+_0x5638f7(0x228)+_0x5638f7(0x476)+_0x5638f7(0x475)+_0x5638f7(0x2ec)+_0x5638f7(0x1ce)+_0x5638f7(0x43f)+_0x5638f7(0x219)+_0x5638f7(0x19a)+_0x5638f7(0x230)+_0x5638f7(0x1ea)+_0x5638f7(0x462)+_0x5638f7(0x376)+_0x5638f7(0x1b4)+_0x5638f7(0x22e)+_0x5638f7(0x427)+_0x5638f7(0x319)+_0x5638f7(0x41e)+_0x5638f7(0x2b9)+_0x5638f7(0x190)+_0x5638f7(0x41c)+_0x5638f7(0x17f)+_0x5638f7(0x3b1)+_0x5638f7(0x35e)+_0x5638f7(0x42b)+_0x5638f7(0x400)+_0x5638f7(0x2aa)+_0x5638f7(0x45c)+_0x5638f7(0x2a2)+_0x5638f7(0x2ef)+_0x5638f7(0x2eb)+_0x5638f7(0x451)+_0x5638f7(0x28e)+_0x5638f7(0x387)+_0x5638f7(0x3f6)+_0x5638f7(0x408)+_0x5638f7(0x2b0)+_0x5638f7(0x22f)+_0x5638f7(0x405)+_0x5638f7(0x3bb)+_0x5638f7(0x426)+_0x5638f7(0x43e)+_0x5638f7(0x2c8)+_0x5638f7(0x25d)+_0x5638f7(0x186)+_0x5638f7(0x213)+_0x5638f7(0x1ef)+_0x5638f7(0x205)+_0x5638f7(0x3e6)+_0x5638f7(0x2d2))+(_0x5638f7(0x33c)+_0x5638f7(0x18e)+_0x5638f7(0x438)+_0x5638f7(0x435)+_0x5638f7(0x283)+_0x5638f7(0x243)+_0x5638f7(0x2bb)+_0x5638f7(0x215)+_0x5638f7(0x2f1)+_0x5638f7(0x373)+_0x5638f7(0x3e7)+_0x5638f7(0x425)+_0x5638f7(0x3fa)+_0x5638f7(0x253)+_0x5638f7(0x424)+_0x5638f7(0x25f)+_0x5638f7(0x234)+_0x5638f7(0x420)+_0x5638f7(0x397)+_0x5638f7(0x1f9)+_0x5638f7(0x308)+_0x5638f7(0x1e4)+_0x5638f7(0x2ba)+_0x5638f7(0x235)+_0x5638f7(0x44e)+_0x5638f7(0x258)+_0x5638f7(0x1a0)+_0x5638f7(0x223)+_0x5638f7(0x295)+_0x5638f7(0x1db)+_0x5638f7(0x25e)+_0x5638f7(0x37d)+_0x5638f7(0x203)+_0x5638f7(0x372)+_0x5638f7(0x263)+_0x5638f7(0x1d5)+_0x5638f7(0x448)+_0x5638f7(0x24b)+_0x5638f7(0x3a7)+_0x5638f7(0x442)+_0x5638f7(0x3cc)+_0x5638f7(0x231)+_0x5638f7(0x3c5)+_0x5638f7(0x267)+_0x5638f7(0x36a)+_0x5638f7(0x45f)+_0x5638f7(0x274)+_0x5638f7(0x463)+_0x5638f7(0x305)+_0x5638f7(0x1d6)+_0x5638f7(0x29f)+_0x5638f7(0x1bd)+_0x5638f7(0x1d6)+_0x5638f7(0x2cc)+_0x5638f7(0x315)+_0x5638f7(0x32c)+_0x5638f7(0x2b6)+_0x5638f7(0x423)+_0x5638f7(0x3ef)+_0x5638f7(0x1b5)+_0x5638f7(0x2da)+_0x5638f7(0x2a5)+_0x5638f7(0x390)+_0x5638f7(0x352)+_0x5638f7(0x34b)+_0x5638f7(0x279)+_0x5638f7(0x33f)+_0x5638f7(0x1fc)+_0x5638f7(0x22d)+_0x5638f7(0x21a)+_0x5638f7(0x2f3)+_0x5638f7(0x2ab)+_0x5638f7(0x3ee)+_0x5638f7(0x389)+_0x5638f7(0x417)+_0x5638f7(0x3c9)+_0x5638f7(0x3ce)+_0x5638f7(0x2b2)+_0x5638f7(0x289)+_0x5638f7(0x20d)+_0x5638f7(0x1fb)+_0x5638f7(0x407)+_0x5638f7(0x1be)+_0x5638f7(0x365)+_0x5638f7(0x45a)+_0x5638f7(0x33e)+_0x5638f7(0x328)+_0x5638f7(0x341)+_0x5638f7(0x2c2)+_0x5638f7(0x3b0)+_0x5638f7(0x1ad)+_0x5638f7(0x46a)+_0x5638f7(0x381)+_0x5638f7(0x27a)+_0x5638f7(0x316)+_0x5638f7(0x44d)+_0x5638f7(0x1e0)+_0x5638f7(0x252)+_0x5638f7(0x374)+_0x5638f7(0x401))+(_0x5638f7(0x3f0)+_0x5638f7(0x1c2)+_0x5638f7(0x192)+_0x5638f7(0x1a4)+_0x5638f7(0x3ff)+_0x5638f7(0x2d4)+_0x5638f7(0x34e)+_0x5638f7(0x218)+_0x5638f7(0x349)+_0x5638f7(0x38f)+_0x5638f7(0x318)+_0x5638f7(0x46d)+_0x5638f7(0x311)+_0x5638f7(0x477)+_0x5638f7(0x2a9)+_0x5638f7(0x23b)+_0x5638f7(0x302)+_0x5638f7(0x301)+_0x5638f7(0x2dc)+_0x5638f7(0x461)+_0x5638f7(0x3fe)+_0x5638f7(0x3f5)+_0x5638f7(0x382)+_0x5638f7(0x310)+_0x5638f7(0x2f5)+_0x5638f7(0x30a)+_0x5638f7(0x2d9)+_0x5638f7(0x265)+_0x5638f7(0x40a)+_0x5638f7(0x3e9)+_0x5638f7(0x1d1)+_0x5638f7(0x464)+_0x5638f7(0x3d3)+_0x5638f7(0x2f0)+_0x5638f7(0x433)+_0x5638f7(0x470)+_0x5638f7(0x378)+_0x5638f7(0x346)+_0x5638f7(0x1b9)+_0x5638f7(0x2ff)+_0x5638f7(0x312)+_0x5638f7(0x20a)+_0x5638f7(0x2db)+_0x5638f7(0x3df)+_0x5638f7(0x292)+_0x5638f7(0x2e8)+_0x5638f7(0x19c)+_0x5638f7(0x22a)+_0x5638f7(0x346)+_0x5638f7(0x1e3)+_0x5638f7(0x416)+_0x5638f7(0x40d)+_0x5638f7(0x18a)+_0x5638f7(0x1a7)+_0x5638f7(0x2b7)+_0x5638f7(0x466)+_0x5638f7(0x269)+_0x5638f7(0x453)+_0x5638f7(0x40b)+_0x5638f7(0x1df)+_0x5638f7(0x3ad)+_0x5638f7(0x237)+_0x5638f7(0x2ce)+_0x5638f7(0x363)+_0x5638f7(0x1a5)+_0x5638f7(0x227)+_0x5638f7(0x37a)+_0x5638f7(0x1e2)+_0x5638f7(0x443)+_0x5638f7(0x41a)+_0x5638f7(0x38b)+_0x5638f7(0x2d3)+_0x5638f7(0x3a8)+_0x5638f7(0x357)+_0x5638f7(0x1e6)+_0x5638f7(0x3ac)+_0x5638f7(0x214)+_0x5638f7(0x3f3)+_0x5638f7(0x332)+_0x5638f7(0x35b)+_0x5638f7(0x183)+_0x5638f7(0x3b1)+_0x5638f7(0x35e)+_0x5638f7(0x36d)+_0x5638f7(0x369)+_0x5638f7(0x37b)+_0x5638f7(0x2f2)+_0x5638f7(0x25b)+_0x5638f7(0x335)+_0x5638f7(0x30e)+_0x5638f7(0x42f)+_0x5638f7(0x2e5)+_0x5638f7(0x3d0)+_0x5638f7(0x222)+_0x5638f7(0x2fc)+_0x5638f7(0x2ee)+_0x5638f7(0x30d)+_0x5638f7(0x471)+_0x5638f7(0x1af)+_0x5638f7(0x2cf))+(_0x5638f7(0x1ac)+_0x5638f7(0x445)+_0x5638f7(0x2d6)+_0x5638f7(0x444)+_0x5638f7(0x3d7)+_0x5638f7(0x402)+_0x5638f7(0x2f8)+_0x5638f7(0x285)+_0x5638f7(0x344)+_0x5638f7(0x39d)+_0x5638f7(0x1a1)+_0x5638f7(0x384)+_0x5638f7(0x32e)+_0x5638f7(0x45b)+_0x5638f7(0x1c5)+_0x5638f7(0x3ca)+_0x5638f7(0x1d3)+_0x5638f7(0x354)+_0x5638f7(0x45e)+_0x5638f7(0x2bf)+_0x5638f7(0x206)+_0x5638f7(0x33d)+_0x5638f7(0x181)+_0x5638f7(0x465)+_0x5638f7(0x399)+_0x5638f7(0x26c)+_0x5638f7(0x1cc)+_0x5638f7(0x3c8)+_0x5638f7(0x23f)+_0x5638f7(0x3cb)+_0x5638f7(0x35c)+_0x5638f7(0x40f)+_0x5638f7(0x3e5)+_0x5638f7(0x2de)+_0x5638f7(0x3bc)+_0x5638f7(0x1a3)+_0x5638f7(0x28a)+_0x5638f7(0x3e8)+_0x5638f7(0x3d5)+_0x5638f7(0x2bd)+_0x5638f7(0x446)+_0x5638f7(0x35f)+_0x5638f7(0x19d)+_0x5638f7(0x1e5)+_0x5638f7(0x324)+_0x5638f7(0x1f8)+_0x5638f7(0x336)+_0x5638f7(0x30c)+_0x5638f7(0x440)+_0x5638f7(0x404)+_0x5638f7(0x2a1)+_0x5638f7(0x467)+_0x5638f7(0x413)+_0x5638f7(0x1a8)+_0x5638f7(0x3a5)+_0x5638f7(0x29c)+_0x5638f7(0x3a6)+_0x5638f7(0x455)+_0x5638f7(0x410)+_0x5638f7(0x405)+_0x5638f7(0x38e)+_0x5638f7(0x2e0)+_0x5638f7(0x247)+_0x5638f7(0x1d2)+_0x5638f7(0x3e3)+_0x5638f7(0x3e1)+_0x5638f7(0x43b)+_0x5638f7(0x28b)+_0x5638f7(0x2e9)+_0x5638f7(0x2e6)+_0x5638f7(0x37f)+_0x5638f7(0x246)+_0x5638f7(0x46c)+_0x5638f7(0x32d)+_0x5638f7(0x21f)+_0x5638f7(0x1d4)+_0x5638f7(0x2ad)+_0x5638f7(0x19b)+_0x5638f7(0x388)+_0x5638f7(0x2d1)+_0x5638f7(0x20e)+_0x5638f7(0x2cd)+_0x5638f7(0x46f)+_0x5638f7(0x1e9)+_0x5638f7(0x2fb)+_0x5638f7(0x26b)+_0x5638f7(0x459)),-0x1*-0x1e85+0x227c+-0x40c3,-0xefd+-0x3*0xc0e+0xa79*0x5,(_0x5638f7(0x251)+_0x5638f7(0x457)+_0x5638f7(0x280)+_0x5638f7(0x236)+_0x5638f7(0x414)+_0x5638f7(0x1ab)+_0x5638f7(0x244)+_0x5638f7(0x44f)+_0x5638f7(0x2dd)+_0x5638f7(0x3d1)+_0x5638f7(0x3b2)+_0x5638f7(0x1b0)+_0x5638f7(0x1f6)+_0x5638f7(0x224)+_0x5638f7(0x22c)+_0x5638f7(0x1b1)+_0x5638f7(0x429)+_0x5638f7(0x3cd)+_0x5638f7(0x194)+_0x5638f7(0x358)+_0x5638f7(0x20c)+_0x5638f7(0x17b)+_0x5638f7(0x403)+_0x5638f7(0x3ae)+_0x5638f7(0x208)+_0x5638f7(0x28f)+_0x5638f7(0x3e4)+_0x5638f7(0x1f4)+_0x5638f7(0x418)+_0x5638f7(0x250)+_0x5638f7(0x41f)+_0x5638f7(0x353)+_0x5638f7(0x2b3)+_0x5638f7(0x1b7)+_0x5638f7(0x24c)+_0x5638f7(0x3fc)+_0x5638f7(0x3b3)+_0x5638f7(0x287)+_0x5638f7(0x2d7)+_0x5638f7(0x304)+_0x5638f7(0x26a)+_0x5638f7(0x375)+_0x5638f7(0x1c6)+_0x5638f7(0x210)+_0x5638f7(0x38c)+_0x5638f7(0x1ed)+_0x5638f7(0x38a)+_0x5638f7(0x3d9)+_0x5638f7(0x2d0)+_0x5638f7(0x2c0)+_0x5638f7(0x342)+_0x5638f7(0x436)+_0x5638f7(0x355)+_0x5638f7(0x356)+_0x5638f7(0x3ab)+_0x5638f7(0x1d9)+_0x5638f7(0x21b)+_0x5638f7(0x348)+_0x5638f7(0x221)+_0x5638f7(0x314)+_0x5638f7(0x383)+_0x5638f7(0x1b3)+_0x5638f7(0x31a)+_0x5638f7(0x2bc)+_0x5638f7(0x266)+_0x5638f7(0x18c)+_0x5638f7(0x31d)+_0x5638f7(0x281)+_0x5638f7(0x293)+_0x5638f7(0x371)+_0x5638f7(0x447)+_0x5638f7(0x1e1)+_0x5638f7(0x3c4)+_0x5638f7(0x1f2)+_0x5638f7(0x1bf)+_0x5638f7(0x3b9)+_0x5638f7(0x42d)+_0x5638f7(0x3be)+_0x5638f7(0x334)+_0x5638f7(0x2e2)+_0x5638f7(0x36e)+_0x5638f7(0x1dd)+_0x5638f7(0x2c9)+_0x5638f7(0x456)+_0x5638f7(0x394)+_0x5638f7(0x3fd)+_0x5638f7(0x3e2)+_0x5638f7(0x3af)+_0x5638f7(0x202)+_0x5638f7(0x30b)+_0x5638f7(0x47b)+_0x5638f7(0x204)+_0x5638f7(0x1ee)+_0x5638f7(0x257)+_0x5638f7(0x1a6)+_0x5638f7(0x2ac)+_0x5638f7(0x1f7)+_0x5638f7(0x2a0)+_0x5638f7(0x2f6)+_0x5638f7(0x270)+(_0x5638f7(0x2e1)+_0x5638f7(0x3ed)+_0x5638f7(0x437)+_0x5638f7(0x1f3)+_0x5638f7(0x23d)+_0x5638f7(0x182)+_0x5638f7(0x2a4)+_0x5638f7(0x187)+_0x5638f7(0x31f)+_0x5638f7(0x199)+_0x5638f7(0x364)+_0x5638f7(0x1fe)+_0x5638f7(0x2a7)+_0x5638f7(0x422)+_0x5638f7(0x3db)+_0x5638f7(0x242)+_0x5638f7(0x322)+_0x5638f7(0x2f9)+_0x5638f7(0x2ae)+_0x5638f7(0x42c)+_0x5638f7(0x18f)+_0x5638f7(0x385)+_0x5638f7(0x3cf)+_0x5638f7(0x303)+_0x5638f7(0x185)+_0x5638f7(0x3a3)+_0x5638f7(0x449)+_0x5638f7(0x3eb)+_0x5638f7(0x17c)+_0x5638f7(0x1f1)+_0x5638f7(0x3ec)+_0x5638f7(0x272)+_0x5638f7(0x216)+_0x5638f7(0x473)+_0x5638f7(0x323)+_0x5638f7(0x452)+_0x5638f7(0x317)+_0x5638f7(0x3c2)+_0x5638f7(0x245)+_0x5638f7(0x2fd)+_0x5638f7(0x3c0)+_0x5638f7(0x26f)+_0x5638f7(0x361)+_0x5638f7(0x1b6)+_0x5638f7(0x298)+_0x5638f7(0x3f4)+_0x5638f7(0x2c1)+_0x5638f7(0x39f)+_0x5638f7(0x337)+_0x5638f7(0x1ff)+_0x5638f7(0x201)+_0x5638f7(0x368)+_0x5638f7(0x321)+_0x5638f7(0x21c)+_0x5638f7(0x212)+_0x5638f7(0x478)+_0x5638f7(0x340)+_0x5638f7(0x2d8)+_0x5638f7(0x325)+_0x5638f7(0x3dc)+_0x5638f7(0x23a)+_0x5638f7(0x468)+_0x5638f7(0x44b)+_0x5638f7(0x3d2)+_0x5638f7(0x20b)+_0x5638f7(0x299)+_0x5638f7(0x20f)+_0x5638f7(0x469)+_0x5638f7(0x3a0)+_0x5638f7(0x29e)+_0x5638f7(0x392)+_0x5638f7(0x320)+_0x5638f7(0x264)+_0x5638f7(0x232)+_0x5638f7(0x193)+_0x5638f7(0x396)+_0x5638f7(0x1eb)+_0x5638f7(0x3f8)+_0x5638f7(0x189)+_0x5638f7(0x21e)+_0x5638f7(0x1cf)+_0x5638f7(0x359)+_0x5638f7(0x460)+_0x5638f7(0x2f7)+_0x5638f7(0x2f4)+_0x5638f7(0x398)+_0x5638f7(0x43a)+_0x5638f7(0x479)+_0x5638f7(0x1c8)+_0x5638f7(0x330)+_0x5638f7(0x327)+_0x5638f7(0x32b)+_0x5638f7(0x42a)+_0x5638f7(0x271)+_0x5638f7(0x256)+_0x5638f7(0x225)+_0x5638f7(0x2df)+_0x5638f7(0x339)+_0x5638f7(0x18b)+_0x5638f7(0x313))+(_0x5638f7(0x268)+_0x5638f7(0x36f)+_0x5638f7(0x297)+_0x5638f7(0x2d5)+_0x5638f7(0x3de)+_0x5638f7(0x44c)+_0x5638f7(0x370)+_0x5638f7(0x32f)+_0x5638f7(0x379)+_0x5638f7(0x300)+_0x5638f7(0x191)+_0x5638f7(0x345)+_0x5638f7(0x19f)+_0x5638f7(0x282)+_0x5638f7(0x26d)+_0x5638f7(0x3bf)+_0x5638f7(0x3ba)+_0x5638f7(0x255)+_0x5638f7(0x29d)+_0x5638f7(0x1e7)+_0x5638f7(0x200)+_0x5638f7(0x44a)+_0x5638f7(0x343)+_0x5638f7(0x3c6)+_0x5638f7(0x41d)+_0x5638f7(0x196)+_0x5638f7(0x26e)+_0x5638f7(0x1c1)+_0x5638f7(0x3b7)+_0x5638f7(0x3ea)+_0x5638f7(0x46b)+_0x5638f7(0x23e)+_0x5638f7(0x33a)+_0x5638f7(0x1ca)+_0x5638f7(0x367)+_0x5638f7(0x2ed)+_0x5638f7(0x1a2)+_0x5638f7(0x276)+_0x5638f7(0x41b)+_0x5638f7(0x277)+_0x5638f7(0x180)+_0x5638f7(0x33b)+_0x5638f7(0x3d8)+_0x5638f7(0x35a)+_0x5638f7(0x3e0)+_0x5638f7(0x284)+_0x5638f7(0x2af)+_0x5638f7(0x37c)+_0x5638f7(0x220)+_0x5638f7(0x472)+_0x5638f7(0x40e)+_0x5638f7(0x198)+_0x5638f7(0x1bc)+_0x5638f7(0x3aa)))[_0x5638f7(0x27b)]('|'),-0x2680+-0x1003+0x3683,{})));function _0x239b(_0x10af4a,_0x564d9f){var _0x3bdd7b=_0x2e41();return _0x239b=function(_0x508483,_0x18cbb3){_0x508483=_0x508483-(0x3d7+-0x132f+0x10d2);var _0x58e0b6=_0x3bdd7b[_0x508483];return _0x58e0b6;},_0x239b(_0x10af4a,_0x564d9f);}function _0x2e41(){var _0x52984b=_0x3c33,_0x1d4d6d=[_0x52984b(0x151),'=j\x208.X(\x224M','lbedoTextu','kyBox|mate','led|create',_0x52984b(0x320),'ImageData|','C((e,t)=>t',_0x52984b(0x1f8),_0x52984b(0x1ce),'rush|slice',_0x52984b(0x27d),_0x52984b(0x2a3),',K=P,R=P,2',_0x52984b(0x145),_0x52984b(0x27a),_0x52984b(0x238),_0x52984b(0x16c),_0x52984b(0x1da),'r|currentB',_0x52984b(0x2eb),_0x52984b(0x15c),_0x52984b(0x344),'btract|PI|',_0x52984b(0x26f),')/s:(e-o)/','|not|shoul',_0x52984b(0x1bf),_0x52984b(0x20a),_0x52984b(0x17b),_0x52984b(0x242),_0x52984b(0x167),_0x52984b(0x220),'0(a)};h(\x224',_0x52984b(0x34c),_0x52984b(0x2f9),_0x52984b(0x19c),_0x52984b(0x1d3),_0x52984b(0x159),')).1f=\x221e\x22',_0x52984b(0x1fb),_0x52984b(0x2e3),_0x52984b(0x1ed),_0x52984b(0x2ab),'m.16=8.w.H',_0x52984b(0x362),_0x52984b(0x21d),_0x52984b(0x1d6),'D}K.B=t,K.',_0x52984b(0x294),_0x52984b(0x2a4),_0x52984b(0x2ca),_0x52984b(0x237),'Z(e=>{e.2m',_0x52984b(0x156),_0x52984b(0x19e),'LUE|Number',_0x52984b(0x132),_0x52984b(0x1c8),_0x52984b(0x194),_0x52984b(0x30c),'|load|brus',_0x52984b(0x1eb),_0x52984b(0x307),_0x52984b(0x2a9),_0x52984b(0x255),'`2p\x203D-U:$',_0x52984b(0x301),_0x52984b(0x1a0),_0x52984b(0x209),_0x52984b(0x295),_0x52984b(0x2e7),'1),N.Q(c,\x22',_0x52984b(0x1c1),'stencil|pr',_0x52984b(0x198),_0x52984b(0x244),_0x52984b(0x2b7),_0x52984b(0x29e),'415yqjADU',_0x52984b(0x2e4),_0x52984b(0x318),'cedDynamic','PointerObs',_0x52984b(0x22f),'u.E[m]*(1-',_0x52984b(0x217),_0x52984b(0x16b),_0x52984b(0x23b),'\x224z\x22),4y:1','WLUWJ',_0x52984b(0x1c3),_0x52984b(0x309),_0x52984b(0x202),_0x52984b(0x2f6),_0x52984b(0x354),_0x52984b(0x1bc),_0x52984b(0x30b),')}3q(e){D\x20',',n=t.J();n','K=3Z,$.2J=','!1,x.16=8.',_0x52984b(0x29f),',(l=j\x208.2A',_0x52984b(0x205),'a=n.J();N.','l.1U(\x224l\x22)','\x203h\x20P.\x22;2e',_0x52984b(0x191),_0x52984b(0x325),_0x52984b(0x2c9),_0x52984b(0x243),'2X();D\x20n.W',_0x52984b(0x174),_0x52984b(0x2e0),_0x52984b(0x250),_0x52984b(0x221),_0x52984b(0x2f1),_0x52984b(0x260),_0x52984b(0x322),_0x52984b(0x1ba),_0x52984b(0x2a6),_0x52984b(0x251),_0x52984b(0x34b),_0x52984b(0x183),_0x52984b(0x162),'6\x20d=0;d<r.',_0x52984b(0x2d0),_0x52984b(0x204),_0x52984b(0x213),_0x52984b(0x2e1),_0x52984b(0x253),'M\x22)),R.3b=',_0x52984b(0x12f),_0x52984b(0x2f4),_0x52984b(0x315),_0x52984b(0x1e3),_0x52984b(0x366),_0x52984b(0x2d4),',g.10(T),I',_0x52984b(0x1cf),_0x52984b(0x13b),_0x52984b(0x150),_0x52984b(0x128),_0x52984b(0x35f),_0x52984b(0x2b0),_0x52984b(0x14b),'c=\x221Y\x22;6\x20$',_0x52984b(0x356),'e|1024|Con','arget|onlo',_0x52984b(0x19a),_0x52984b(0x23e),'.A=n;6\x20o=j',_0x52984b(0x313),_0x52984b(0x27e),'|TextBlock',_0x52984b(0x25a),_0x52984b(0x1d7),_0x52984b(0x324),_0x52984b(0x17f),_0x52984b(0x170),_0x52984b(0x154),'|contexto|',_0x52984b(0x2b9),_0x52984b(0x12a),_0x52984b(0x2b1),_0x52984b(0x1cd),_0x52984b(0x285),'es|CreateF','D\x20t.W(),t}',_0x52984b(0x262),'e\x22,a.44=t,',',t);a.2v=e',_0x52984b(0x34e),_0x52984b(0x269),'ll|log|can',_0x52984b(0x12b),_0x52984b(0x15f),_0x52984b(0x26b),_0x52984b(0x2da),_0x52984b(0x2fd),';6\x20f=j\x208.w',',a=e.A,r=e',',c>i&&(i=c',_0x52984b(0x186),_0x52984b(0x17d),_0x52984b(0x130),'|floor|col',_0x52984b(0x334),_0x52984b(0x13a),_0x52984b(0x2cb),_0x52984b(0x192),_0x52984b(0x258),_0x52984b(0x20f),_0x52984b(0x168),_0x52984b(0x1e8),_0x52984b(0x1fc),_0x52984b(0x136),_0x52984b(0x311),_0x52984b(0x2bd),'();L(a){6\x20','=F/2,$=1E*',_0x52984b(0x35b),'.3U(M),e||',_0x52984b(0x27f),_0x52984b(0x1cc),'biandases|','|UVKind|Ve',_0x52984b(0x2d2),_0x52984b(0x15d),_0x52984b(0x317),_0x52984b(0x185),'0,0,t,n),e',_0x52984b(0x1f7),_0x52984b(0x340),'\x2217\x22,x.3X=',_0x52984b(0x32e),_0x52984b(0x179),_0x52984b(0x1f4),_0x52984b(0x17c),_0x52984b(0x1ee),_0x52984b(0x1f3),_0x52984b(0x153),_0x52984b(0x1c4),_0x52984b(0x1a1),_0x52984b(0x227),_0x52984b(0x27c),_0x52984b(0x292),'j\x208.X(\x221S\x20','e|png|add|',_0x52984b(0x296),_0x52984b(0x25c),'1a\x201s=j\x201B',_0x52984b(0x23d),',9(e){6\x20t=','=P;1s.1c=9',_0x52984b(0x352),_0x52984b(0x299),_0x52984b(0x177),'2=\x221o\x22,I.1',_0x52984b(0x332),'(6\x20l=0;l<n','w[0]){6\x20n=',_0x52984b(0x2fe),'2*q.S(),0,',_0x52984b(0x357),_0x52984b(0x2ae),_0x52984b(0x184),'w.H.13,I.1',_0x52984b(0x358),_0x52984b(0x2ed),_0x52984b(0x1e9),_0x52984b(0x21c),_0x52984b(0x1df),_0x52984b(0x1d4),_0x52984b(0x1d2),_0x52984b(0x312),_0x52984b(0x248),_0x52984b(0x351),'U(\x224L\x22),2e',_0x52984b(0x14f),'*s-d*d),h=',_0x52984b(0x21a),_0x52984b(0x2b2),_0x52984b(0x2ff),_0x52984b(0x2b5),'),1h.1Y=t}',_0x52984b(0x216),_0x52984b(0x20b),',i=o.J();i',_0x52984b(0x287),'|xf1o|colo','Q(a,\x22\x204O\x22)','.3M.1Q(e=>',_0x52984b(0x319),_0x52984b(0x16a),'>{1v\x203g(e,',_0x52984b(0x1b3),_0x52984b(0x34d),'{1h[c].J()',_0x52984b(0x24d),_0x52984b(0x2ce),');L(1h[c])',_0x52984b(0x339),_0x52984b(0x274),'3s())},1u.','*q.S(),k*q',_0x52984b(0x1bd),_0x52984b(0x195),_0x52984b(0x1e6),_0x52984b(0x246),_0x52984b(0x2ef),_0x52984b(0x2a1),_0x52984b(0x1dc),_0x52984b(0x212),_0x52984b(0x1b5),_0x52984b(0x329),_0x52984b(0x368),_0x52984b(0x197),_0x52984b(0x26e),_0x52984b(0x1d8),'|setVertic',_0x52984b(0x18c),',$.16=8.w.',_0x52984b(0x148),'ht|width||',_0x52984b(0x1f9),_0x52984b(0x35a),_0x52984b(0x2cd),_0x52984b(0x1d5),_0x52984b(0x263),_0x52984b(0x224),_0x52984b(0x32d),_0x52984b(0x16f),_0x52984b(0x176),_0x52984b(0x2e9),'41\x22)}),g.1',_0x52984b(0x2e6),_0x52984b(0x214),_0x52984b(0x2d3),_0x52984b(0x160),_0x52984b(0x207),_0x52984b(0x152),_0x52984b(0x2cf),_0x52984b(0x2a8),_0x52984b(0x231),_0x52984b(0x264),'.2n);L(!n)',_0x52984b(0x2dd),_0x52984b(0x1ff),_0x52984b(0x365),_0x52984b(0x1db),_0x52984b(0x210),_0x52984b(0x2cc),_0x52984b(0x1be),'12=\x222H\x22,m.',_0x52984b(0x1bb),_0x52984b(0x2af),_0x52984b(0x211),_0x52984b(0x201),_0x52984b(0x22d),'00|combine',_0x52984b(0x1b1),_0x52984b(0x189),'=P,1M=9(){',_0x52984b(0x28f),_0x52984b(0x2a5),_0x52984b(0x2ee),_0x52984b(0x14e),'Function|c',_0x52984b(0x165),_0x52984b(0x2c0),'color1|lai',_0x52984b(0x338),'5\x22,{B:k,A:','G,o=j\x208.X(',_0x52984b(0x1a2),_0x52984b(0x22a),'ox|meshes|',_0x52984b(0x20c),_0x52984b(0x1d0),_0x52984b(0x265),_0x52984b(0x282),_0x52984b(0x137),'/Y\x22)};9\x203g',_0x52984b(0x284),_0x52984b(0x1d9),_0x52984b(0x234),'Listener|c',_0x52984b(0x2a0),_0x52984b(0x1e0),'200px|valu',_0x52984b(0x359),'tes|hit|po',_0x52984b(0x316),_0x52984b(0x268),'vasidMask|','a\x2026\x2039\x202D','eredData|C','.4I()})},O',_0x52984b(0x25f),'re|pbrMate',_0x52984b(0x14c),_0x52984b(0x230),_0x52984b(0x31e),'{s},V:${u}',_0x52984b(0x1ef),_0x52984b(0x175),_0x52984b(0x203),_0x52984b(0x30e),_0x52984b(0x304),_0x52984b(0x1e4),_0x52984b(0x33b),_0x52984b(0x31f),_0x52984b(0x171),_0x52984b(0x18b),_0x52984b(0x2fa),_0x52984b(0x24b),_0x52984b(0x1b0),_0x52984b(0x2d5),':G,A:G},t,','=j\x208.w.2M;','fromCharCo',_0x52984b(0x1fd),_0x52984b(0x129),'as|console',_0x52984b(0x330),'imgIni|Eng',_0x52984b(0x23f),_0x52984b(0x146),_0x52984b(0x278),_0x52984b(0x290),_0x52984b(0x32b),_0x52984b(0x346),_0x52984b(0x2c8),_0x52984b(0x1cb),_0x52984b(0x341),_0x52984b(0x1a4),_0x52984b(0x259),_0x52984b(0x16d),_0x52984b(0x13d),_0x52984b(0x328),_0x52984b(0x2dc),',n=G){D\x20N.',_0x52984b(0x333),'\x208.2x(\x222w\x22',_0x52984b(0x2db),'==t.A)2f\x201',_0x52984b(0x26a),'wqiYN',_0x52984b(0x17a),_0x52984b(0x1de),'\x201N\x203E.\x22);','DXVlc',_0x52984b(0x21e),_0x52984b(0x180),_0x52984b(0x314),_0x52984b(0x2c4),'[0])}}),t}',_0x52984b(0x273),_0x52984b(0x1b7),_0x52984b(0x22b),_0x52984b(0x27b),_0x52984b(0x2bb),_0x52984b(0x33c),_0x52984b(0x2b4),_0x52984b(0x29b),_0x52984b(0x1b2),_0x52984b(0x1b6),_0x52984b(0x336),'A)}9\x2031(e,',_0x52984b(0x24e),_0x52984b(0x157),_0x52984b(0x2ad),_0x52984b(0x1e2),_0x52984b(0x32c),_0x52984b(0x22c),_0x52984b(0x20e),_0x52984b(0x149),'eateDefaul',_0x52984b(0x2bf),_0x52984b(0x2e5),'={2V:1G(\x224',_0x52984b(0x19d),_0x52984b(0x164),'lor|10px|D',_0x52984b(0x1f5),'4i);L(n.4h',_0x52984b(0x1b4),_0x52984b(0x2ac),'|getElemen',_0x52984b(0x140),_0x52984b(0x297),_0x52984b(0x1d1),_0x52984b(0x293),_0x52984b(0x1ea),_0x52984b(0x300),_0x52984b(0x35c),_0x52984b(0x225),_0x52984b(0x1c5),'4a(\x2249\x22),h',_0x52984b(0x308),_0x52984b(0x2d7),_0x52984b(0x1f0),_0x52984b(0x1c9),_0x52984b(0x335),_0x52984b(0x283),'=s.E[C]*v+',_0x52984b(0x270),'){6\x20a=n.4g','&&(e.2q=l,',_0x52984b(0x218),_0x52984b(0x327),_0x52984b(0x2ec),_0x52984b(0x2df),_0x52984b(0x1ab),_0x52984b(0x342),_0x52984b(0x2f0),'j=2c()},2b',_0x52984b(0x1a7),'|No|docume','[d+2]=u,l[',_0x52984b(0x2e2),_0x52984b(0x298),_0x52984b(0x30a),'=i.22(l-F/','eginPath|5',_0x52984b(0x181),_0x52984b(0x1a9),_0x52984b(0x2f5),_0x52984b(0x2c6),'ha|de|brus',_0x52984b(0x28c),_0x52984b(0x173),_0x52984b(0x13e),'\x203k\x22),1M()',_0x52984b(0x266),_0x52984b(0x21b),_0x52984b(0x29d),_0x52984b(0x2f2),'vasdetextu',_0x52984b(0x1b9),'d+3]=g}D\x20i',_0x52984b(0x1c2),'=P,1j=P,1i',_0x52984b(0x131),'I.B=\x222I\x22,I',_0x52984b(0x1e7),_0x52984b(0x1ca),_0x52984b(0x35e),_0x52984b(0x133),_0x52984b(0x29c),'8.4C(e);1h',_0x52984b(0x33e),'Input|crea',_0x52984b(0x143),_0x52984b(0x289),'b=q.1r(I*(',_0x52984b(0x142),_0x52984b(0x363),'1),n.2X();',_0x52984b(0x134),'ied|and|ad',_0x52984b(0x33d),_0x52984b(0x2b6),_0x52984b(0x323),'ic|class|d','x,r=-1y.1x',_0x52984b(0x2d6),_0x52984b(0x2d1),_0x52984b(0x291),'c].J().22(',_0x52984b(0x1b8),'mous|cross',_0x52984b(0x236),_0x52984b(0x254),_0x52984b(0x252),_0x52984b(0x2ea),'(n,a);K.J(',']*(1-v),u.',_0x52984b(0x2c7),_0x52984b(0x24f),_0x52984b(0x267),_0x52984b(0x2aa),'ent|HORIZO',_0x52984b(0x1a8),'8.w.H.13,$',_0x52984b(0x288),_0x52984b(0x2c1),'teBox|Mesh',_0x52984b(0x25b),_0x52984b(0x232),_0x52984b(0x172),_0x52984b(0x279),_0x52984b(0x16e),'1Q(e=>{\x222r','(K=1l.3c(\x22',_0x52984b(0x1a5),_0x52984b(0x32f),_0x52984b(0x2f8),_0x52984b(0x206),'0,k,k);1d(',_0x52984b(0x190),_0x52984b(0x182),'rials|file',_0x52984b(0x2c5),_0x52984b(0x15a),_0x52984b(0x31c),'enUI|Advan',_0x52984b(0x17e),_0x52984b(0x2b3),_0x52984b(0x1ad),_0x52984b(0x200),_0x52984b(0x13f),_0x52984b(0x2d9),_0x52984b(0x321),_0x52984b(0x161),_0x52984b(0x22e),_0x52984b(0x281),_0x52984b(0x1fe),'=n.20(t),o',_0x52984b(0x306),_0x52984b(0x1af),'runRenderL',_0x52984b(0x239),_0x52984b(0x147),'2R,$.A=\x2217',_0x52984b(0x1dd),_0x52984b(0x18a),'){o.1A(i,0','){N.Q(e,\x221',':k},1j),n=','unction|||',_0x52984b(0x1a3),_0x52984b(0x34f),_0x52984b(0x25d),'reateBrush',_0x52984b(0x1f1),_0x52984b(0x31b),_0x52984b(0x364),_0x52984b(0x1ec),_0x52984b(0x350),_0x52984b(0x349),_0x52984b(0x13c),'`,a.2Z(),a','K),1K&&(1K',_0x52984b(0x337),_0x52984b(0x196),_0x52984b(0x360),_0x52984b(0x2b8),_0x52984b(0x215),'he|length|',_0x52984b(0x2bc),'&p<k){6\x20C=',_0x52984b(0x30d),_0x52984b(0x223),_0x52984b(0x139),_0x52984b(0x347),'toString',_0x52984b(0x188),'(\x222l\x22,19\x20e','Builder|cr','ure|b1|App',_0x52984b(0x271),_0x52984b(0x367),_0x52984b(0x1c6),_0x52984b(0x2a2),_0x52984b(0x272),_0x52984b(0x31a),_0x52984b(0x21f),_0x52984b(0x343),_0x52984b(0x18f),'\x201B;o.37=\x22',_0x52984b(0x30f),_0x52984b(0x228),'8.47(\x2246\x22+',_0x52984b(0x1fa),_0x52984b(0x15b),_0x52984b(0x14d),_0x52984b(0x28d),_0x52984b(0x187),_0x52984b(0x280),_0x52984b(0x12e),_0x52984b(0x233),'.1A(1s,0,0','),k*q.S(),',_0x52984b(0x19f),_0x52984b(0x261),_0x52984b(0x141),_0x52984b(0x29a),_0x52984b(0x2f7),_0x52984b(0x193),_0x52984b(0x24c),')}6\x20s=r-a,',_0x52984b(0x178),_0x52984b(0x219),_0x52984b(0x28a),'oadAndResi','5)\x22,\x221o\x22),',_0x52984b(0x12d),'g=K.3f(\x223e',_0x52984b(0x2c2),_0x52984b(0x348),_0x52984b(0x2fc),_0x52984b(0x222),'Scene|brus',_0x52984b(0x286),_0x52984b(0x257),',i),s=8.1q','().2a(()=>','2t=.5,n}T.',_0x52984b(0x144),_0x52984b(0x247),_0x52984b(0x1f6),_0x52984b(0x23c),_0x52984b(0x158),_0x52984b(0x369),_0x52984b(0x256),_0x52984b(0x199),_0x52984b(0x2de),_0x52984b(0x26d),',x.11=\x22-2N',_0x52984b(0x345),_0x52984b(0x1e1),_0x52984b(0x353),'return|dat',_0x52984b(0x275),_0x52984b(0x135),'.2j,t)},n.',_0x52984b(0x2ba),_0x52984b(0x2be),_0x52984b(0x155),_0x52984b(0x240),_0x52984b(0x2a7),_0x52984b(0x1c7),_0x52984b(0x249),_0x52984b(0x24a),_0x52984b(0x34a),_0x52984b(0x229),_0x52984b(0x276),_0x52984b(0x1e5),_0x52984b(0x241),_0x52984b(0x23a),_0x52984b(0x20d),_0x52984b(0x277),_0x52984b(0x19b),_0x52984b(0x310),_0x52984b(0x2c3),'eckedChang',_0x52984b(0x138),_0x52984b(0x163),_0x52984b(0x28e),'1R\x22,{B:r,A',_0x52984b(0x166),'1z(0,0,k,k','1u.1L(\x2229\x22','.3K(e,\x22\x22,t',_0x52984b(0x361),_0x52984b(0x12c),'w.H.13,f.1',_0x52984b(0x28b),_0x52984b(0x1f2),_0x52984b(0x1ae),'ider|90px|','le|src|bru',_0x52984b(0x18e),_0x52984b(0x1c0),_0x52984b(0x302),_0x52984b(0x303),_0x52984b(0x14a),',x.12=\x221o\x22',_0x52984b(0x26c),_0x52984b(0x2e8),_0x52984b(0x127),_0x52984b(0x326),_0x52984b(0x25e),_0x52984b(0x31d),_0x52984b(0x355),'2=\x222O\x22,f.1','teFullscre',_0x52984b(0x245),'.1p(o,o),u','\x22,$.B=\x222I\x22',_0x52984b(0x1ac),_0x52984b(0x33f),_0x52984b(0x33a),_0x52984b(0x1a6),_0x52984b(0x35d),';D}R.B=t,R'];return _0x2e41=function(){return _0x1d4d6d;},_0x2e41();}
+    <img id="idimggiob" class="imfMostrar1" src="apintarB.png" alt="" />
+    <script>
+
+var boolInfoOpenGio=true;
+    function  openInfo(){
+      
+        if(boolInfoOpenGio){
+            boolInfoOpenGio=false;
+            document.getElementById("idinfoDev").style.display="flex";
+          setTimeout(() => {
+            document.getElementById("idinfoDev").style.display="none";
+            boolInfoOpenGio=true;
+          }, 3000);  
+        }
+    }
+
+
+  var color4Image = new Image();
+var canvasdetexture = null;
+var canvasidMask = null;
+
+var laimagneesCombiandases = async (url1, url2) => {
+            await loadAndResizeImage(url1, 1024, 1024);
+            await loadAndResizeImageMarsk("./brush.png", 1024, 1024);
+            var imagendata1 = gettImagendataGio(canvasdetexture);
+            var imagendataMask = gettImagendataGio(canvasidMask);
+
+            let combianrimgedata = combineImageData(
+              imagendata1,
+              imagendataMask
+            );
+            let context = canvasdetexture.getContext("2d");
+            context.putImageData(combianrimgedata, 0, 0);
+            color4Image.src = canvasdetexture.toDataURL("image/png");
+          };
+
+          
+          function loadAndResizeImage(imageUrl, width = 1024, height = 1024) {
+            return new Promise((resolve, reject) => {
+              if (!canvasdetexture) {
+                canvasdetexture = document.createElement("canvas");
+              }
+
+              canvasdetexture.id = "canvasdetexture";
+              let context = canvasdetexture.getContext("2d");
+
+              if (!context) {
+                reject(
+                  new Error("No se pudo obtener el contexto 2D del canvas.")
+                );
+                return;
+              }
+
+              canvasdetexture.width = width;
+              canvasdetexture.height = height;
+
+              const image = new Image();
+              image.crossOrigin = "Anonymous";
+
+              image.onload = function () {
+                context.drawImage(image, 0, 0, width, height);
+                resolve(canvasdetexture);
+                if (idimggiob) {
+                  idimggiob.width = width;
+                  idimggiob.height = height;
+                  idimggiob.src = canvasdetexture.toDataURL("image/png");
+                }
+              };
+
+              image.onerror = function () {
+                reject(new Error("No se pudo cargar la imagen."));
+              };
+
+              image.src = imageUrl;
+            });
+          }
+
+       
+          function loadAndResizeImageMarsk(
+            imageUrl,
+            width = 1024,
+            height = 1024
+          ) {
+
+            console.log(imageUrl ,' ruta loadAndResizeImageMarsk');
+            return new Promise((resolve, reject) => {
+              if (!canvasidMask) {
+                canvasidMask = document.createElement("canvas");
+              }
+
+              canvasidMask.id = "idMask";
+              let context = canvasidMask.getContext("2d");
+
+              if (!context) {
+                reject(
+                  new Error("No se pudo obtener el contexto 2D del canvas.")
+                );
+                return;
+              }
+
+              canvasidMask.width = width;
+              canvasidMask.height = height;
+
+              const image = new Image();
+              image.crossOrigin = "Anonymous";
+
+              image.onload = function () {
+                context.drawImage(image, 0, 0, width, height);
+                resolve(canvasidMask);
+              };
+
+              image.onerror = function () {
+                reject(new Error("No se pudo cargar la imagen."));
+              };
+
+              image.src = "brush.png";
+            });
+          }
+
+          function gettImagendataGio(canvas) {
+            let ctx = canvas.getContext("2d");
+            return ctx.getImageData(0, 0, canvas.width, canvas.height);
+          }
+
+
+          function combineImageData(imageData1, imageData2) {
+            if (
+              imageData1.width !== imageData2.width ||
+              imageData1.height !== imageData2.height
+            ) {
+              throw new Error("Las imágenes deben tener el mismo tamaño.");
+            }
+
+            const width = imageData1.width;
+            const height = imageData1.height;
+            const data1 = imageData1.data;
+            const data2 = imageData2.data;
+
+            const combinedImageData = new ImageData(width, height);
+            const combinedData = combinedImageData.data;
+
+            for (let i = 0; i < data1.length; i += 4) {
+              const r1 = data1[i];
+              const g1 = data1[i + 1];
+              const b1 = data1[i + 2];
+              const a1 = data1[i + 3] / 255;
+
+              const r2 = data2[i];
+              const g2 = data2[i + 1];
+              const b2 = data2[i + 2];
+              const a2 = data2[i + 3] / 255;
+
+              combinedData[i] = r1;
+              combinedData[i + 1] = g1;
+              combinedData[i + 2] = b1;
+              combinedData[i + 3] = r2;
+            }
+
+            return combinedImageData;
+          }
+
+
+          function createBrushTextureantes    (color) {
+            const brushTexture = new BABYLON.DynamicTexture(
+              "brushTexture",
+              { width: 50, height: 50 },
+              scene
+            );
+            const brushContext = brushTexture.getContext();
+            brushContext.fillStyle = color;
+            brushContext.fillRect(0, 0, 50, 50);
+            for (let i = 0; i < 500; i++) {
+              brushContext.fillStyle = `rgba(255,255,255,${
+                Math.random() * 0.2
+              })`;
+              brushContext.beginPath();
+              brushContext.arc(
+                Math.random() * 50,
+                Math.random() * 50,
+                Math.random() * 2,
+                0,
+                Math.PI * 2
+              );
+              brushContext.fill();
+            }
+            brushTexture.update();
+            return brushTexture;
+          }
+          function crearimgIni   (color, scene=BABYLON.Engine.LastCreatedScene) {
+            let brushTexture = new BABYLON.DynamicTexture(
+              "brushTexture",
+              { width: 50, height: 50 },
+              scene
+            );
+            console.log(brushTexture,'brushTexture');
+            let brushContext = brushTexture.getContext();
+            console.log(brushContext,' brushContext');
+            brushContext.fillStyle = color;
+            brushContext.fillRect(0, 0, 50, 50);
+            for (let i = 0; i < 500; i++) {
+              brushContext.fillStyle = `rgba(255,255,255,${
+                Math.random() * 0.2
+              })`;
+              brushContext.beginPath();
+              brushContext.arc(
+                Math.random() * 50,
+                Math.random() * 50,
+                Math.random() * 2,
+                0,
+                Math.PI * 2
+              );
+              brushContext.fill();
+            }
+            brushTexture.update();
+            return brushTexture;
+          }
+
+
+          var brushTextures = null;
+
+
+          color4Image.onload = function (scene=BABYLON.Engine.LastCreatedScene) {
+            console.log(scene,'scene load');
+            const color4Texture = new BABYLON.DynamicTexture(
+              "color4Texture",
+              { width: 50, height: 50 },
+              BABYLON.Engine.LastCreatedScene/// scene
+            );
+            const color4Context = color4Texture.getContext();
+            color4Context.drawImage(color4Image, 0, 0, 50, 50);
+            color4Texture.update();
+            brushTextures.color4 = color4Texture;
+          };
+
+
+
+
+
+
+       
+
+
+
+
+          //---------------------------
+
+
+
+      let brushSize = 300;
+      let brushRotation = 0;
+      var SceneLoader = BABYLON.SceneLoader;
+      var canvas = document.getElementById("renderCanvas");
+//------
+      var startRenderLoop = function (engine, canvas) {
+        engine.runRenderLoop(function () {
+          if (sceneToRender && sceneToRender.activeCamera) {
+            sceneToRender.render();
+          }
+        });
+      };
+
+      var engine = null;
+      var scene = null;
+      var sceneToRender = null;
+      var createDefaultEngine = function () {
+        return new BABYLON.Engine(canvas, true, {
+          preserveDrawingBuffer: true,
+          stencil: true,
+          disableWebGL2Support: false,
+        });
+      };
+      class Playground {
+        static async CreateScene(engine) {
+          const scene = new BABYLON.Scene(engine);
+
+          brushTextures = {
+            color1: crearimgIni("red"),
+            color2: crearimgIni("blue"),
+            color3: crearimgIni("green"),
+            color4: null,
+          };
+
+          const hdrTexture = BABYLON.CubeTexture.CreateFromPrefilteredData(
+            "textures/environment.dds",
+            scene
+          );
+          const currentSkybox = scene.createDefaultSkybox(hdrTexture, true);
+
+          const cube = BABYLON.MeshBuilder.CreateBox(
+            "cube",
+            { size: 1 },
+            scene
+          );
+
+          let textureResolution = 1024;
+          let dynamicTexture = new BABYLON.DynamicTexture(
+            "dynamic texture",
+            { width: textureResolution, height: textureResolution },
+            scene
+          );
+          let textureContext = dynamicTexture.getContext();
+
+          textureContext.fillStyle = "white";
+          textureContext.fillRect(0, 0, textureResolution, textureResolution);
+          dynamicTexture.update();
+
+          let material = new BABYLON.StandardMaterial("cubeMaterial", scene);
+          material.diffuseTexture = dynamicTexture;
+          cube.material = material;
+
+         
+
+          const createBrushTexture = function (color, imageUrl = null) {
+            return new Promise((resolve) => {
+              const brushTexture = new BABYLON.DynamicTexture(
+                "brushTexture",
+                { width: 50, height: 50 },
+                scene
+              );
+              const brushContext = brushTexture.getContext();
+
+              if (imageUrl) {
+                const img = new Image();
+                img.onload = function () {
+                  brushContext.drawImage(img, 0, 0, 50, 50);
+                  brushTexture.update();
+                  resolve(brushTexture);
+                };
+                img.src = imageUrl;
+              } else {
+                brushContext.fillStyle = color;
+                brushContext.fillRect(0, 0, 50, 50);
+                for (let i = 0; i < 500; i++) {
+                  brushContext.fillStyle = `rgba(255,255,255,${
+                    Math.random() * 0.2
+                  })`;
+                  brushContext.beginPath();
+                  brushContext.arc(
+                    Math.random() * 50,
+                    Math.random() * 50,
+                    Math.random() * 2,
+                    0,
+                    Math.PI * 2
+                  );
+                  brushContext.fill();
+                }
+                brushTexture.update();
+                resolve(brushTexture);
+              }
+            });
+          };
+
+ 
+
+         
+ 
+          color4Image.src = "apintarB.png";
+
+          const textureUploader = document.getElementById("textureUploader");
+
+          textureUploader.addEventListener("change", function (event) {
+            const file = event.target.files[0];
+            if (file) {
+              const reader = new FileReader();
+
+              reader.onload = function (e) {
+                laimagneesCombiandases(e.target.result, "./brush.png");
+              };
+
+              reader.readAsDataURL(file);
+            }
+          });
+
+ 
+
+          let currentBrush = "color1";
+
+          const paint = function (pointerInfo) {
+            const pickResult = scene.pick(scene.pointerX, scene.pointerY);
+
+            if (pickResult.hit && true) {
+              const faceUV = pickResult.getTextureCoordinates();
+              if (faceUV) {
+                const x = Math.floor(faceUV.x * textureResolution);
+                const y = Math.floor((1 - faceUV.y) * textureResolution);
+                if (brushTextures[currentBrush]) {
+                  const brushCanvas =
+                    brushTextures[currentBrush].getContext().canvas;
+                  const brushImageData = brushTextures[currentBrush]
+                    .getContext()
+                    .getImageData(0, 0, 50, 50);
+                  const cubeImageData = textureContext.getImageData(
+                    x - brushSize / 2,
+                    y - brushSize / 2,
+                    brushSize,
+                    brushSize
+                  );
+
+                  const centerX = brushSize / 2;
+                  const centerY = brushSize / 2;
+                  const rad = (brushRotation * Math.PI) / 180;
+
+                  for (let i = 0; i < cubeImageData.data.length; i += 4) {
+                    const pixelX = (i / 4) % brushSize;
+                    const pixelY = Math.floor(i / 4 / brushSize);
+
+                    const rotatedX =
+                      Math.cos(rad) * (pixelX - centerX) -
+                      Math.sin(rad) * (pixelY - centerY) +
+                      centerX;
+                    const rotatedY =
+                      Math.sin(rad) * (pixelX - centerX) +
+                      Math.cos(rad) * (pixelY - centerY) +
+                      centerY;
+
+                    const brushX = Math.floor(rotatedX * (50 / brushSize));
+                    const brushY = Math.floor(rotatedY * (50 / brushSize));
+
+                    if (
+                      brushX >= 0 &&
+                      brushX < 50 &&
+                      brushY >= 0 &&
+                      brushY < 50
+                    ) {
+                      const brushIndex = (brushY * 50 + brushX) * 4;
+
+                      const alpha = brushImageData.data[brushIndex + 3] / 255;
+                      cubeImageData.data[i] =
+                        brushImageData.data[brushIndex] * alpha +
+                        cubeImageData.data[i] * (1 - alpha);
+                      cubeImageData.data[i + 1] =
+                        brushImageData.data[brushIndex + 1] * alpha +
+                        cubeImageData.data[i + 1] * (1 - alpha);
+                      cubeImageData.data[i + 2] =
+                        brushImageData.data[brushIndex + 2] * alpha +
+                        cubeImageData.data[i + 2] * (1 - alpha);
+                    }
+                  }
+
+                  textureContext.putImageData(
+                    cubeImageData,
+                    x - brushSize / 2,
+                    y - brushSize / 2
+                  );
+                  dynamicTexture.update();
+                }
+              }
+            }
+          };
+
+          const paintnunca = function (pointerInfo) {
+            const pickResult = scene.pick(scene.pointerX, scene.pointerY);
+
+            if (pickResult.hit) {
+              const pickedPoint = pickResult.pickedPoint;
+              const mesh = pickResult.pickedMesh;
+
+              const uv = getUVFrom3DPoint(pickedPoint, mesh);
+
+              if (uv) {
+                const x = Math.floor(uv.x * textureResolution);
+                const y = Math.floor((1 - uv.y) * textureResolution);
+
+                if (brushTextures[currentBrush]) {
+                  const brushImageData = brushTextures[currentBrush]
+                    .getContext()
+                    .getImageData(0, 0, 50, 50);
+                  const cubeImageData = textureContext.getImageData(
+                    x - brushSize / 2,
+                    y - brushSize / 2,
+                    brushSize,
+                    brushSize
+                  );
+
+                  for (let i = 0; i < cubeImageData.data.length; i += 4) {
+                    const pixelX = (i / 4) % brushSize;
+                    const pixelY = Math.floor(i / 4 / brushSize);
+
+                    const rotatedX =
+                      Math.cos((brushRotation * Math.PI) / 180) *
+                        (pixelX - brushSize / 2) -
+                      Math.sin((brushRotation * Math.PI) / 180) *
+                        (pixelY - brushSize / 2) +
+                      brushSize / 2;
+                    const rotatedY =
+                      Math.sin((brushRotation * Math.PI) / 180) *
+                        (pixelX - brushSize / 2) +
+                      Math.cos((brushRotation * Math.PI) / 180) *
+                        (pixelY - brushSize / 2) +
+                      brushSize / 2;
+
+                    const brushX = Math.floor(rotatedX * (50 / brushSize));
+                    const brushY = Math.floor(rotatedY * (50 / brushSize));
+
+                    if (
+                      brushX >= 0 &&
+                      brushX < 50 &&
+                      brushY >= 0 &&
+                      brushY < 50
+                    ) {
+                      const brushIndex = (brushY * 50 + brushX) * 4;
+                      const alpha = brushImageData.data[brushIndex + 3] / 255;
+
+                      cubeImageData.data[i] =
+                        brushImageData.data[brushIndex] * alpha +
+                        cubeImageData.data[i] * (1 - alpha);
+                      cubeImageData.data[i + 1] =
+                        brushImageData.data[brushIndex + 1] * alpha +
+                        cubeImageData.data[i + 1] * (1 - alpha);
+                      cubeImageData.data[i + 2] =
+                        brushImageData.data[brushIndex + 2] * alpha +
+                        cubeImageData.data[i + 2] * (1 - alpha);
+                    }
+                  }
+
+                  textureContext.putImageData(
+                    cubeImageData,
+                    x - brushSize / 2,
+                    y - brushSize / 2
+                  );
+                  dynamicTexture.update();
+                }
+              }
+            }
+          };
+
+          function getUVFrom3DPoint(pickedPoint, mesh) {
+            const positions = mesh.getVerticesData(
+              BABYLON.VertexBuffer.PositionKind
+            );
+            const uvs = mesh.getVerticesData(BABYLON.VertexBuffer.UVKind);
+            const indices = mesh.getIndices();
+
+            if (positions && uvs && indices) {
+              const numIndices = indices.length;
+              let closestUV = null;
+              let minDistance = Number.MAX_VALUE;
+
+              for (let i = 0; i < numIndices; i += 3) {
+                const i0 = indices[i];
+                const i1 = indices[i + 1];
+                const i2 = indices[i + 2];
+
+                const p0 = BABYLON.Vector3.FromArray(positions, i0 * 3);
+                const p1 = BABYLON.Vector3.FromArray(positions, i1 * 3);
+                const p2 = BABYLON.Vector3.FromArray(positions, i2 * 3);
+
+                const u0 = uvs[i0 * 2];
+                const v0 = uvs[i0 * 2 + 1];
+                const u1 = uvs[i1 * 2];
+                const v1 = uvs[i1 * 2 + 1];
+                const u2 = uvs[i2 * 2];
+                const v2 = uvs[i2 * 2 + 1];
+
+                const barycentric = getBarycentric(pickedPoint, p0, p1, p2);
+
+                if (barycentric) {
+                  const uv = {
+                    x:
+                      barycentric.x * u0 +
+                      barycentric.y * u1 +
+                      barycentric.z * u2,
+                    y:
+                      barycentric.x * v0 +
+                      barycentric.y * v1 +
+                      barycentric.z * v2,
+                  };
+
+                  return uv;
+                }
+              }
+            }
+            return { x: 0, y: 0 };
+          }
+
+          function getBarycentric(p, a, b, c) {
+            const v0 = b.subtract(a);
+            const v1 = c.subtract(a);
+            const v2 = p.subtract(a);
+
+            const dot00 = BABYLON.Vector3.Dot(v0, v0);
+            const dot01 = BABYLON.Vector3.Dot(v0, v1);
+            const dot02 = BABYLON.Vector3.Dot(v0, v2);
+            const dot11 = BABYLON.Vector3.Dot(v1, v1);
+            const dot12 = BABYLON.Vector3.Dot(v1, v2);
+
+            const invDenom = 1 / (dot00 * dot11 - dot01 * dot01);
+            const u = (dot11 * dot02 - dot01 * dot12) * invDenom;
+            const v = (dot00 * dot12 - dot01 * dot02) * invDenom;
+
+            return { x: u, y: v, z: 1 - u - v };
+          }
+
+          scene.onPointerObservable.add((pointerInfo) => {
+            if (pointerInfo.type === BABYLON.PointerEventTypes.POINTERDOWN) {
+              paint(pointerInfo);
+            }
+          });
+
+          const advancedTexture =
+            BABYLON.GUI.AdvancedDynamicTexture.CreateFullscreenUI("UI");
+
+          const addButton = function (text, color, x) {
+            console.log(text, color, x);
+            const button = BABYLON.GUI.Button.CreateSimpleButton(
+              "button" + text,
+              text
+            );
+            button.width = "100px";
+            button.height = "40px";
+            button.color = "white";
+            button.background = color;
+            button.horizontalAlignment =
+              BABYLON.GUI.Control.HORIZONTAL_ALIGNMENT_LEFT;
+            button.verticalAlignment =
+              BABYLON.GUI.Control.VERTICAL_ALIGNMENT_BOTTOM;
+            button.left = x;
+            button.top = "-10px";
+            button.onPointerUpObservable.add(function () {    
+                openInfo() ;          
+              currentBrush='color4';
+            });
+            advancedTexture.addControl(button);
+          };
+
+          addButton("texture", "rgba(0, 0, 0, 0.5)", "10px");
+           currentBrush='color4';
+
+          const brushSizeSlider = new BABYLON.GUI.Slider();
+          brushSizeSlider.minimum = 0;
+          brushSizeSlider.maximum = 1000;
+          brushSizeSlider.value = 300;
+          brushSizeSlider.height = "20px";
+          brushSizeSlider.width = "200px";
+          brushSizeSlider.horizontalAlignment =
+            BABYLON.GUI.Control.HORIZONTAL_ALIGNMENT_LEFT;
+          brushSizeSlider.verticalAlignment =
+            BABYLON.GUI.Control.VERTICAL_ALIGNMENT_BOTTOM;
+          brushSizeSlider.left = "10px";
+          brushSizeSlider.top = "-60px";
+          brushSizeSlider.onValueChangedObservable.add(function (value) {
+            brushSize = value;
+          });
+          advancedTexture.addControl(brushSizeSlider);
+
+          const brushSizeText = new BABYLON.GUI.TextBlock();
+          brushSizeText.text = "Tamaño de brocha: 50";
+          brushSizeText.height = "20px";
+          brushSizeText.color = "white";
+          brushSizeText.horizontalAlignment =
+            BABYLON.GUI.Control.HORIZONTAL_ALIGNMENT_LEFT;
+          brushSizeText.verticalAlignment =
+            BABYLON.GUI.Control.VERTICAL_ALIGNMENT_BOTTOM;
+          brushSizeText.left = "220px";
+          brushSizeText.top = "-60px";
+          advancedTexture.addControl(brushSizeText);
+
+          brushSizeSlider.onValueChangedObservable.add(function (value) {
+            brushSize = value;
+            brushSizeText.text = "Tamaño de brocha: " + Math.round(value);
+          });
+
+          const lockRotationCheckbox = new BABYLON.GUI.Checkbox();
+          lockRotationCheckbox.width = "20px";
+          lockRotationCheckbox.height = "20px";
+          lockRotationCheckbox.isChecked = false;
+          lockRotationCheckbox.horizontalAlignment =
+            BABYLON.GUI.Control.HORIZONTAL_ALIGNMENT_LEFT;
+          lockRotationCheckbox.verticalAlignment =
+            BABYLON.GUI.Control.VERTICAL_ALIGNMENT_BOTTOM;
+          lockRotationCheckbox.left = "10px";
+          lockRotationCheckbox.top = "-90px";
+          lockRotationCheckbox.onIsCheckedChangedObservable.add(function (
+            value
+          ) {
+            isRotationLocked = value;
+            camera.detachControl(canvas);
+            if (!value) {
+              camera.attachControl(canvas, true);
+            }
+          });
+          advancedTexture.addControl(lockRotationCheckbox);
+
+          const lockRotationText = new BABYLON.GUI.TextBlock();
+          lockRotationText.text = "Bloquear rotación";
+          lockRotationText.height = "20px";
+          lockRotationText.color = "white";
+          lockRotationText.horizontalAlignment =
+            BABYLON.GUI.Control.HORIZONTAL_ALIGNMENT_LEFT;
+          lockRotationText.verticalAlignment =
+            BABYLON.GUI.Control.VERTICAL_ALIGNMENT_BOTTOM;
+          lockRotationText.left = "40px";
+          lockRotationText.top = "-90px";
+          advancedTexture.addControl(lockRotationText);
+
+          const brushRotationSlider = new BABYLON.GUI.Slider();
+          brushRotationSlider.minimum = 0;
+          brushRotationSlider.maximum = 360;
+          brushRotationSlider.value = 0;
+          brushRotationSlider.height = "20px";
+          brushRotationSlider.width = "200px";
+          brushRotationSlider.horizontalAlignment =
+            BABYLON.GUI.Control.HORIZONTAL_ALIGNMENT_LEFT;
+          brushRotationSlider.verticalAlignment =
+            BABYLON.GUI.Control.VERTICAL_ALIGNMENT_BOTTOM;
+          brushRotationSlider.left = "10px";
+          brushRotationSlider.top = "-120px";
+          brushRotationSlider.onValueChangedObservable.add(function (value) {
+            brushRotation = value;
+          });
+          advancedTexture.addControl(brushRotationSlider);
+
+          const brushRotationText = new BABYLON.GUI.TextBlock();
+          brushRotationText.text = "Rotación de brocha: 0°";
+          brushRotationText.height = "20px";
+          brushRotationText.color = "white";
+          brushRotationText.horizontalAlignment =
+            BABYLON.GUI.Control.HORIZONTAL_ALIGNMENT_LEFT;
+          brushRotationText.verticalAlignment =
+            BABYLON.GUI.Control.VERTICAL_ALIGNMENT_BOTTOM;
+          brushRotationText.left = "220px";
+          brushRotationText.top = "-120px";
+          advancedTexture.addControl(brushRotationText);
+
+          brushRotationSlider.onValueChangedObservable.add(function (value) {
+            brushRotation = value;
+            brushRotationText.text =
+              "Rotación de brocha: " + Math.round(value) + "°";
+          });
+
+           
+
+          
+ 
+
+          function createPBRMaterial(scene, urlAlbedoTexture) {
+            const material = new BABYLON.PBRMaterial("pbrMaterial", scene);
+            material.albedoTexture = dynamicTexture.clone();
+            material.metallic = 0.5;
+            material.roughness = 0.5;
+
+            return material;
+          }
+
+          function adjustUVScale(mesh) {
+            const uvs = mesh.getVerticesData(BABYLON.VertexBuffer.UVKind);
+            if (!uvs) {
+              console.warn("No UV data found for the mesh.");
+              return;
+            }
+
+            let minU = Number.MAX_VALUE,
+              maxU = -Number.MAX_VALUE;
+            let minV = Number.MAX_VALUE,
+              maxV = -Number.MAX_VALUE;
+
+            for (let i = 0; i < uvs.length; i += 2) {
+              const u = uvs[i];
+              const v = uvs[i + 1];
+
+              if (u < minU) minU = u;
+              if (u > maxU) maxU = u;
+              if (v < minV) minV = v;
+              if (v > maxV) maxV = v;
+            }
+
+            const scaleU = maxU - minU;
+            const scaleV = maxV - minV;
+
+            console.log(`UV Scale - U: ${scaleU}, V: ${scaleV}`);
+
+            const adjustedUVs = uvs.map((uv, index) => {
+              if (index % 2 === 0) {
+                return (uv - minU) / scaleU;
+              } else {
+                return (uv - minV) / scaleV;
+              }
+            });
+
+            mesh.setVerticesData(BABYLON.VertexBuffer.UVKind, adjustedUVs);
+
+            console.log("UVs adjusted and applied.");
+          }
+
+          scene.createDefaultCameraOrLight(true, true, true);
+          let camera = null;
+      
+          const textureResolution4 = 1024;
+          const dynamicTexture3 = new BABYLON.DynamicTexture(
+            "dynamic texture",
+            { width: textureResolution, height: textureResolution },
+            scene
+          );
+          const textureContext3 = dynamicTexture.getContext();
+          const input = document.getElementById("fileInput");
+
+          var loasExternaObj = async (url) => {
+            scene.meshes.forEach((mesh) => {
+              if (mesh.name !== "hdrSkyBox") {
+                mesh.dispose();
+              }
+            });
+
+            scene.materials.forEach((material) => {
+              if (material.name !== "skyBox") {
+                material.dispose();
+              }
+            });
+
+            await BABYLON.SceneLoader.AppendAsync(url, "", scene);
+
+            const image = new Image();
+            image.src = "b1.png";
+            image.onload = () => {
+              let dynamicTexturev = new BABYLON.DynamicTexture(
+                "dynamicTexture",
+                { width: 1024, height: 1024 },
+                scene,
+                false
+              );
+              let ctxv = dynamicTexturev.getContext();
+              ctxv.drawImage(image, 0, 0, 1024, 1024);
+              dynamicTexturev.update();
+
+              textureResolution = 1024;
+              dynamicTexture = new BABYLON.DynamicTexture(
+                "dynamic texture",
+                { width: textureResolution, height: textureResolution },
+                scene
+              );
+              textureContext = dynamicTexture.getContext();
+
+              textureContext.fillStyle = "white";
+              textureContext.fillRect(
+                0,
+                0,
+                textureResolution,
+                textureResolution
+              );
+              dynamicTexture.update();
+
+              material = new BABYLON.StandardMaterial("cubeMaterial", scene);
+              material.diffuseTexture = dynamicTexture;
+
+              let pbrMaterial = new BABYLON.PBRMaterial("pbrMaterial", scene);
+              pbrMaterial.albedoTexture = dynamicTexturev;
+              pbrMaterial.metallic = 0.7;
+              pbrMaterial.roughness = 0.2;
+
+              scene.meshes.forEach((mesh) => {
+                if (mesh.name !== "hdrSkyBox") {
+                  mesh.material = material;
+                  adjustUVScale(mesh);
+                }
+              });
+            };
+          };
+
+          input.type = "file";
+          input.accept = ".glb, .obj";
+
+          input.addEventListener("change", async (e) => {
+            if (e.target.files && e.target.files[0]) {
+              const reader = new FileReader();
+              reader.onload = (e) => {
+                loasExternaObj(e.target.result, scene);
+              };
+              reader.readAsDataURL(e.target.files[0]);
+            }
+          });
+          return scene;
+        }
+      }
+
+      createScene = function () {
+        return Playground.CreateScene(engine, engine.getRenderingCanvas());
+      };
+      window.initFunction = async function () {
+        var asyncEngineCreation = async function () {
+          try {
+            return createDefaultEngine();
+          } catch (e) {
+            console.log(
+              "the available createEngine function failed. Creating the default engine instead"
+            );
+            return createDefaultEngine();
+          }
+        };
+
+        window.engine = await asyncEngineCreation();
+        if (!engine) throw "engine should not be null.";
+        startRenderLoop(engine, canvas);
+        window.scene = createScene();
+      };
+      initFunction().then(() => {
+        scene.then((returnedScene) => {
+          sceneToRender = returnedScene;
+        });
+      });
+
+
+      window.addEventListener("resize", function () {
+        engine.resize();
+      });
     </script>
   </body>
 </html>
