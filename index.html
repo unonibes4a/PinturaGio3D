@@ -242,13 +242,54 @@ font-size: 33px;
 
         cursor: pointer;
         }
+
+        #idbtRepetirImgs{
+
+        }
+        .divBoxClass{
+          display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+  width: 110px;
+        }
+        .ancho{
+          width: 70px;
+          height: 40px;
+        }
+        #idbtRepetirImgs{
+          margin-left: 30px;
+        }
+
+        #idinfoFormatocargaGLB{
+          position: absolute;
+          top: 0%;
+          left: 40px;
+         
+
+          z-index: 2000;
+          width: 130px;
+          height: 139px;
+          background-color: #0000007a;
+          color: #ffffff;
+          font-size: 21px;
+          display: none;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+        }
     </style>
   </head>
 
   <body>
+ 
     <div id="idinfoDev">
       <img class="infoImgBack" src="info.png"  alt="" />
-      <span class="spanclaslabel">Enterprise Giovanni Rodriguez Diaz </span>
+      <span class="spanclaslabel" id="idminambre">  </span>
       <div class="movimiento"></div>
       <div class="movimiento-vertical"></div>
     </div>
@@ -263,10 +304,9 @@ font-size: 33px;
       >
         &#x2681;
       </div>
+      <div id="idinfoFormatocargaGLB">Format 3d .glb</div>
       <script>
-        function loadInputfilesIDdvv() {
-          document.getElementById("fileInput").click();
-        }
+       
       </script>
       <input
         id="fileInput"
@@ -301,18 +341,15 @@ font-size: 33px;
         |=|
       </div>
       <script>
-        var booLayerShow = true;
-        function fclicklayerbabylon() {
-          if (booLayerShow) {
-            BABYLON.Engine.LastCreatedScene.debugLayer.show({
-              embedMode: true,
-            });
-          } else {
-            BABYLON.Engine.LastCreatedScene.debugLayer.hide();
-          }
-          booLayerShow = !booLayerShow;
-        }
+       
       </script>
+
+      <div      class="divBoxClass">
+        <input type="number" id="idInpunumberRepetir" class="elegant-input ancho" value="2">
+        <div id="idbtRepetirImgs" onclick="frepetirImages()"   class="clhover clcirlce">
+          fill
+            </div>
+      </div>
     </div>
     <img id="idimggiob" class="imfMostrar1" src="apintarB.png" alt="" />
     <script src="libreriaDiamica.js"></script>
