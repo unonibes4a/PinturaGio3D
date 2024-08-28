@@ -54,7 +54,8 @@
         top: 50%;
         left: 1%;
 
-        width: 130px;
+        width: 100%;
+        max-width: 50px;
         height: 80px;
         background-color: rgba(0, 0, 0, 0.205);
     
@@ -247,13 +248,17 @@ font-size: 33px;
 
         }
         .divBoxClass{
+          position: relative;
+          margin-left: 3px;
           display: flex;
 	flex-direction: row;
 	flex-wrap: nowrap;
-	justify-content: center;
+	justify-content: flex-start;
 	align-items: center;
 	align-content: center;
   width: 110px;
+        }
+        .divBoxClass *{ margin-left: 10px;
         }
         .ancho{
           width: 70px;
@@ -282,6 +287,10 @@ font-size: 33px;
 	align-items: center;
 	align-content: center;
         }
+
+        @media only screen and (max-width: 600px) {
+    
+}
     </style>
   </head>
 
