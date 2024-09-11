@@ -25,8 +25,22 @@
     <script src="https://cdn.babylonjs.com/serializers/babylonjs.serializers.min.js"></script>
     <script src="https://cdn.babylonjs.com/gui/babylon.gui.min.js"></script>
     <script src="https://cdn.babylonjs.com/inspector/babylon.inspector.bundle.js"></script>
+ 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.7.1/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
 
     <style>
+
+#joystick {
+            position: absolute;
+            bottom: 20px;
+            left: 270px;
+            width: 100px;
+            height: 100px;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 50%;
+            z-index: 13;
+        }
       html,
       body {
         position: absolute;
@@ -291,11 +305,167 @@ font-size: 33px;
         @media only screen and (max-width: 600px) {
     
 }
+#idcircleBrushpaint{
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 200px;
+  height: 200px;
+}
+#idbtMenucoloresMtalliRounees{
+  position: fixed;
+  top: 2%;
+  right: 2%;
+  width: 26px;
+  height: 26px;
+  background-color: #0000007a;
+  border: 2px solid #cecece;
+border-radius: 14px;
+font-size: 12px;
+color: #ffffffea;
+z-index: 1000;
+display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+  cursor: pointer;
+}
+#idbtMenucoloresMtalliRounees:hover{
+ 
+color: #63d3ff;
+}
+#idbtMenucoloresMtalliRounees:focus { 
+    background-color:#63d3ff;
+  }
+
+  #idbtMenucoloresMtalliRounees:active {
+    background-color: #63d3ff;
+  }
+  #idtoolsimg{
+    position: fixed;
+  top:40%;
+  right:20%;
+ 
+  width: 160px;
+  height: 200px;
+ 
+  background-color: #0000007a;
+  border: 2px solid #cecece;
+  z-index: 100000;
+  display: none; 
+ 
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	align-items: baseline;
+	align-content: stretch;
+  }
+
+  #idcolorFuncion{
+ 
+ 
+  width: 80px;
+  height: 40px;
+ 
+  background-color: #0000007a;
+  border: 2px solid #cecece;
+  color: #ffffff;
+  font-size: 13px;
+  display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+  cursor: pointer;
+  }
+    </style>
+    <style>
+      .containerSlider {
+        display: flex;
+        flex-direction: column;  
+        align-items: center;  
+        justify-content: center;  
+        height: 100vh;
+        gap: 20px;  
+        width: 150px;  
+        color: #ffffff;
+        font-size: 14px;
+      }
+  
+      .slider-group {
+      
+        
+         display: flex;
+    flex-direction: column;  
+    align-items: center;
+      }
+  
+      .slider-group input[type="range"] {
+    width: 130px;  
+    height: 10px;
+        -webkit-appearance: none;
+        background: #d3d3d3;
+        outline: none;
+        border-radius: 5px;
+      }
+  
+      .slider-group input[type="range"]::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 20px;
+        height: 20px;
+        background: #4CAF50;
+        cursor: pointer;
+        border-radius: 50%;
+      }
     </style>
   </head>
 
   <body>
- 
+    <div id="idbtMenucoloresMtalliRounees" onclick="colseOpenf()" tabindex="">tools</div>
+<script>
+  var boolCloseopenf=true;
+  function colseOpenf(){
+    if(boolCloseopenf){
+      document.getElementById("idtoolsimg").style.display="flex";
+    }
+    else{
+      document.getElementById("idtoolsimg").style.display="none";
+    }
+    boolCloseopenf=!boolCloseopenf;
+
+  }
+</script>
+
+    <div id="idtoolsimg">
+      <div id="idcolorFuncion" onclick="fmul8a()">ajuste Color</div>
+      <div id="idcolorFuncion" onclick="fsumMatrix()">simple</div>
+      <div      class="divBoxClass">
+        <input type="number" id="idInpunumberRepetir" class="elegant-input ancho" value="2">
+        <div id="idbtRepetirImgs" onclick="frepetirImages()"   class="clhover clcirlce">
+          fill
+            </div>
+      </div>
+      <div class="containerSlider">
+        <div class="slider-group">
+          <label for="slider1">rouness</label>
+          <input type="range" id="slider1" min="0" max="200" value="100" oninput="sliderChangeouness(this.value, 'value1')">
+          <label id="value1">0</label>
+        </div>
+    
+        <div class="slider-group">
+          <label for="slider2">metallic</label>
+          <input type="range" id="slider2" min="0" max="200" value="100" oninput="sliderChangeMetalli(this.value, 'value2')">
+          <label id="value2">0</label>
+        </div>
+      </div>
+      <script> 
+      </script>
+    </div>
+
     <div id="idinfoDev">
       <img class="infoImgBack" src="info.png"  alt="" />
       <span class="spanclaslabel" id="idminambre">  </span>
