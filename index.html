@@ -312,6 +312,42 @@ font-size: 33px;
   width: 200px;
   height: 200px;
 }
+#iddescargacircle{
+  position: absolute;
+  top: -13%;
+  right: -13%;
+}
+.minibtcircle{
+ 
+  width: 26px;
+  height: 26px;
+  background-color: #0000007a;
+  border: 2px solid #cecece;
+  border-radius: 14px;
+font-size: 12px;
+color: #ffffffea;
+z-index: 10;
+display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+  cursor: pointer;
+}
+
+
+#minibtcircle:hover{
+ 
+ color: #63d3ff;
+ }
+ #minibtcircle:focus { 
+     background-color:#63d3ff;
+   }
+ 
+   #minibtcircle:active {
+     background-color: #63d3ff;
+   }
 #idbtMenucoloresMtalliRounees{
   position: fixed;
   top: 2%;
@@ -441,8 +477,10 @@ color: #63d3ff;
 </script>
 
     <div id="idtoolsimg">
+      <div id="iddescargacircle" class="minibtcircle"  onclick="descargarImagenesObj3d()" tabindex="">&#8595;</div>
       <div id="idcolorFuncion" onclick="fmul8a()">ajuste Color</div>
       <div id="idcolorFuncion" onclick="fsumMatrix()">simple</div>
+      <div id="idcolorFuncion" onclick="fsumMatrix2b()">simple best</div>
       <div      class="divBoxClass">
         <input type="number" id="idInpunumberRepetir" class="elegant-input ancho" value="2">
         <div id="idbtRepetirImgs" onclick="frepetirImages()"   class="clhover clcirlce">
