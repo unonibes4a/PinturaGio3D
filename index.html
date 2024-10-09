@@ -457,6 +457,22 @@ color: #63d3ff;
         cursor: pointer;
         border-radius: 50%;
       }
+      #idactivasrdesactivarcamerainputline{
+       position: relative;
+        width: 90%;
+        height: auto;
+        display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	align-items: baseline;
+	align-content: stretch;
+  color: #e7e7e77a;
+      }
+      .claschecboxAnchoAlto{
+        width: 24px;
+        height:24px;
+      }
     </style>
   </head>
 
@@ -480,7 +496,18 @@ color: #63d3ff;
       <div id="iddescargacircle" class="minibtcircle"  onclick="descargarImagenesObj3d()" tabindex="">&#8595;</div>
       <div id="idcolorFuncion" onclick="fmul8a()">ajuste Color</div>
       <div id="idcolorFuncion" onclick="fsumMatrix()">simple</div>
+      <div id="idcolorFuncion" onclick="fenhanceEarthTones()">lineal color</div>
       <div id="idcolorFuncion" onclick="fsumMatrix2b()">simple best</div>
+      <div id="idcolorFuncion" onclick="factualaunreal()">pow</div>
+     
+       
+      <div id="idactivasrdesactivarcamerainputline">
+        <label for="">Rotation Camera</label>
+        <input class="claschecboxAnchoAlto" type="checkbox" id="idrotarcamera" name="idrotarcamera"   >
+        <label for="">Paint Continue</label>
+        <input class="claschecboxAnchoAlto" type="checkbox" id="pintacontinuoid" name="idrotarcamera"   >
+      </div>
+       
       <div      class="divBoxClass">
         <input type="number" id="idInpunumberRepetir" class="elegant-input ancho" value="2">
         <div id="idbtRepetirImgs" onclick="frepetirImages()"   class="clhover clcirlce">
